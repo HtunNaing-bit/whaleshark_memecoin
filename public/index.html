@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+        location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+      }
+    </script>
     <meta name="theme-color" content="#00ffff" />
     <meta
       name="description"
