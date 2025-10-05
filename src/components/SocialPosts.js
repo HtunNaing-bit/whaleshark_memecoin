@@ -69,7 +69,7 @@ const SocialPosts = () => {
             }}
           >
             <div className="post-header">
-              <img src="/whale-shark-logo.svg" alt="WhaleShark" className="post-avatar" />
+              <img src="./whale-shark-logo.svg" alt="WhaleShark" className="post-avatar" />
               <div className="post-info">
                 <span className="post-author">{post.author}</span>
                 <span className="post-time">{post.time}</span>
@@ -77,7 +77,7 @@ const SocialPosts = () => {
             </div>
             <div className="post-content">
               <p>{post.content}</p>
-                <img src="/whale-shark-logo.svg" alt="WhaleShark" className="post-image" />
+                <img src="./whale-shark-logo.svg" alt="WhaleShark" className="post-image" />
             </div>
             <div className="post-actions">
               <button className="action-btn">❤️ {post.likes}</button>

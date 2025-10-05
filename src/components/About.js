@@ -20,7 +20,7 @@ const About = memo(() => {
           viewport={{ once: true }}
         >
           <div className="profile-pic">
-            <img src="/whale-shark-logo.svg" alt="WhaleShark PFP" className="pfp-image" />
+            <img src="./whale-shark-logo.svg" alt="WhaleShark PFP" className="pfp-image" />
             <div className="pfp-status online"></div>
           </div>
           <div className="profile-info">

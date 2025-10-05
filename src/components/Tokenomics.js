@@ -28,7 +28,7 @@ const Tokenomics = memo(() => {
         viewport={{ once: true }}
       >
         <div className="tokenomics-logo">
-          <img src="/whale-shark-logo.svg" alt="WhaleShark Logo" className="tokenomics-logo-img" />
+          <img src="./whale-shark-logo.svg" alt="WhaleShark Logo" className="tokenomics-logo-img" />
         </div>
         <div className="tokenomics-info">
           <h3>1,000,000,000</h3>

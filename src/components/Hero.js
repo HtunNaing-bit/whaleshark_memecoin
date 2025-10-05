@@ -12,7 +12,7 @@ const Hero = memo(() => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <img src="/whale-shark-logo.svg" alt="whale shark wif backpack" className="hero-logo" />
+          <img src="./whale-shark-logo.svg" alt="whale shark wif backpack" className="hero-logo" />
         </motion.div>
         
         <motion.h1
