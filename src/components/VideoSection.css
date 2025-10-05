@@ -1,0 +1,292 @@
+/* Minimal Video Section Styles */
+.video-section {
+  padding: 3rem 0;
+  text-align: center;
+  background: var(--cyber-card);
+  border-top: 1px solid var(--cyber-border);
+  border-bottom: 1px solid var(--cyber-border);
+  position: relative;
+}
+
+
+.video-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.video-section h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--neon-cyan);
+  margin-bottom: 1rem;
+}
+
+.video-section p {
+  font-size: 1rem;
+  color: var(--neon-cyan);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.video-player {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
+  border: 2px solid var(--cyber-border);
+  position: relative;
+  background: var(--cyber-dark);
+}
+
+.video-player::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: var(--holo-primary);
+  border-radius: 25px;
+  opacity: 0;
+  transition: var(--transition-smooth);
+  z-index: -1;
+}
+
+.video-player:hover::before {
+  opacity: 0.3;
+  animation: holoRotate 2s linear infinite;
+}
+
+.video-player:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-holo);
+}
+
+/* Video controls styling */
+.video-player::-webkit-media-controls-panel {
+  background: var(--cyber-card);
+  border-radius: 0 0 20px 20px;
+}
+
+.video-player::-webkit-media-controls-play-button {
+  background: var(--neon-cyan);
+  border-radius: 50%;
+}
+
+.video-container p {
+  color: var(--neon-cyan);
+  font-style: italic;
+  font-size: 1.1rem;
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* Minimal Whale Shark Animation Styles */
+.whale-shark-animation {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000000;
+  border: 1px solid var(--cyber-border);
+  position: relative;
+}
+
+
+.animation-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Minimal Whale Shark Animations */
+.whale-shark-group {
+  animation: whaleSwim 8s ease-in-out infinite;
+}
+
+.whale-body {
+  animation: whaleBreathe 4s ease-in-out infinite;
+}
+
+.whale-tail {
+  animation: tailWag 3s ease-in-out infinite;
+  transform-origin: 280px 200px;
+}
+
+/* Minimal Bubble Animations */
+.bubble {
+  animation: bubbleRise 5s linear infinite;
+}
+
+.bubble-1 { animation-delay: 0s; }
+.bubble-2 { animation-delay: 1s; }
+.bubble-3 { animation-delay: 2s; }
+.bubble-4 { animation-delay: 3s; }
+.bubble-5 { animation-delay: 4s; }
+
+/* Minimal Keyframe Animations */
+@keyframes whaleSwim {
+  0%, 100% { transform: translateX(0px) translateY(0px); }
+  50% { transform: translateX(0px) translateY(-5px); }
+}
+
+@keyframes whaleBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes tailWag {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0px) scale(0.8);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-200px) scale(0.4);
+    opacity: 0;
+  }
+}
+
+
+@keyframes borderGlow {
+  0% { 
+    background: linear-gradient(45deg, 
+      var(--neon-cyan), 
+      var(--neon-pink), 
+      var(--neon-cyan), 
+      var(--neon-pink));
+  }
+  25% { 
+    background: linear-gradient(135deg, 
+      var(--neon-pink), 
+      var(--neon-cyan), 
+      var(--neon-pink), 
+      var(--neon-cyan));
+  }
+  50% { 
+    background: linear-gradient(225deg, 
+      var(--neon-cyan), 
+      var(--neon-pink), 
+      var(--neon-cyan), 
+      var(--neon-pink));
+  }
+  75% { 
+    background: linear-gradient(315deg, 
+      var(--neon-pink), 
+      var(--neon-cyan), 
+      var(--neon-pink), 
+      var(--neon-cyan));
+  }
+  100% { 
+    background: linear-gradient(45deg, 
+      var(--neon-cyan), 
+      var(--neon-pink), 
+      var(--neon-cyan), 
+      var(--neon-pink));
+  }
+}
+
+@keyframes innerGlow {
+  0%, 100% { 
+    background: radial-gradient(ellipse at center, 
+      rgba(0, 212, 255, 0.1) 0%, 
+      transparent 70%);
+  }
+  50% { 
+    background: radial-gradient(ellipse at center, 
+      rgba(0, 212, 255, 0.2) 0%, 
+      rgba(0, 153, 204, 0.1) 50%,
+      transparent 70%);
+  }
+}
+
+@keyframes svgGlow {
+  0%, 100% { 
+    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.4));
+  }
+  50% { 
+    filter: drop-shadow(0 0 50px rgba(0, 212, 255, 0.6)) 
+            drop-shadow(0 0 80px rgba(0, 153, 204, 0.3));
+  }
+}
+
+/* Ultra-Enhanced Animations */
+@keyframes particleFloat {
+  0% { 
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: translateY(-40px) translateX(-10px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.1;
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.3;
+  }
+}
+
+@keyframes titleGlow {
+  0% { 
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+  100% { 
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+  }
+}
+
+@keyframes containerGlow {
+  0%, 100% { 
+    box-shadow: 
+      0 0 30px rgba(0, 212, 255, 0.3),
+      inset 0 0 30px rgba(0, 212, 255, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 40px rgba(0, 212, 255, 0.5),
+      inset 0 0 40px rgba(0, 212, 255, 0.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-section {
+    padding: 2rem 0;
+  }
+  
+  .video-container {
+    padding: 0 1rem;
+  }
+  
+  .whale-shark-animation {
+    height: 250px;
+  }
+  
+  .video-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .video-section p {
+    font-size: 0.9rem;
+  }
+}
