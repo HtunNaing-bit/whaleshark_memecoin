@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/whaleshark_memecoin/static/css/main.55f10ca5.css",
+    "main.js": "/whaleshark_memecoin/static/js/main.85c53c83.js",
+    "index.html": "/whaleshark_memecoin/index.html",
+    "main.55f10ca5.css.map": "/whaleshark_memecoin/static/css/main.55f10ca5.css.map",
+    "main.85c53c83.js.map": "/whaleshark_memecoin/static/js/main.85c53c83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55f10ca5.css",
+    "static/js/main.85c53c83.js"
+  ]
+}
