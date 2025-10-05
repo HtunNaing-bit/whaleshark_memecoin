@@ -6,7 +6,7 @@ const Tokenomics = memo(() => {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = useCallback(() => {
-    navigator.clipboard.writeText('0x1234567890abcdef1234567890abcdef12345678');
+    navigator.clipboard.writeText('CA1234567890abcdef1234567890abcdef12345678');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }, []);
@@ -54,7 +54,7 @@ const Tokenomics = memo(() => {
           <div className="contract-info">
             <p>$whaleshark CONTRACT ADDRESS</p>
             <div className="contract-address">
-              <span>0x1234567890abcdef1234567890abcdef12345678</span>
+              <span>CA1234567890abcdef1234567890abcdef12345678</span>
               <motion.button 
                 className={`copy-btn ${copied ? 'copied' : ''}`}
                 onClick={copyToClipboard}
