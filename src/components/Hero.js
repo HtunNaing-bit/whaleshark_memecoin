@@ -38,9 +38,9 @@ const Hero = memo(() => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
         >
-          Dive deep into the crypto ocean with WhaleShark - the meme coin that's making waves! 
-          Our friendly whale shark is ready to devour the competition with its massive mouth wide open. 
-          Join the pod and ride the wave to the moon! 🚀
+          Dive deep into the crypto ocean with WhaleShark - launching on Pump.fun! 
+          Our friendly whale shark is ready to devour the competition and graduate to Raydium. 
+          Join the pod early and ride the wave to the moon! 🚀🌊
         </motion.p>
         
         <motion.div 
@@ -70,7 +70,7 @@ const Hero = memo(() => {
           transition={{ duration: 1, delay: 1.3 }}
         >
           <motion.a 
-            href="https://dexscreener.com" 
+            href="https://pump.fun" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-primary"
@@ -82,10 +82,10 @@ const Hero = memo(() => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            Check on DexScreener
+            🚀 Launch on Pump.fun
           </motion.a>
           <motion.a 
-            href="https://pump.fun" 
+            href="https://raydium.io" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-secondary"
@@ -97,7 +97,7 @@ const Hero = memo(() => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            Buy $whaleshark Now
+            🌊 Trade on Raydium
           </motion.a>
         </motion.div>
       </div>

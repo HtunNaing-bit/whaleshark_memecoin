@@ -70,21 +70,6 @@ const Tokenomics = memo(() => {
             </div>
             <div className="tokenomics-actions">
               <motion.a 
-                href="https://dexscreener.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn btn-secondary"
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -5,
-                  boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                View Chart
-              </motion.a>
-              <motion.a 
                 href="https://pump.fun" 
                 target="_blank" 
                 rel="noopener noreferrer" 
@@ -97,7 +82,22 @@ const Tokenomics = memo(() => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                Buy Now
+                🚀 Launch on Pump.fun
+              </motion.a>
+              <motion.a 
+                href="https://raydium.io" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-secondary"
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3)"
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                🌊 Trade on Raydium
               </motion.a>
             </div>
           </div>
