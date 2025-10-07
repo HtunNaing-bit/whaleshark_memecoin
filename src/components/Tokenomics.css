@@ -1,7 +1,7 @@
 /* Professional Tokenomics Styles */
 .tokenomics {
   padding: 100px 20px;
-  background: #0f0f0f;
+  background: linear-gradient(135deg, #0f0f0f 0%, #0a1a0a 50%, #0f0f0f 100%);
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -68,13 +68,173 @@
   font-family: 'Inter', sans-serif;
 }
 
-.token-info-grid {
+/* New Token Information Design */
+.token-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-token-card {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 150, 255, 0.1) 100%);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2);
+}
+
+.token-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.token-logo {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #00ffff, #0096ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+}
+
+.token-details h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.token-details p {
+  font-size: 1.2rem;
+  color: #00ffff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.token-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(0, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #00ffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.contract-card {
+  background: linear-gradient(135deg, rgba(255, 0, 150, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2);
+}
+
+.contract-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contract-label {
+  font-size: 1.1rem;
+  color: #00ffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contract-address {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.contract-address code {
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+  line-height: 1.4;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.coming-soon-text {
+  color: #00ffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  font-style: italic;
+}
+
 /* Enhanced Responsive Design */
+@media (max-width: 1400px) {
+  .tokenomics {
+    padding: 100px 40px;
+  }
+  
+  .tokenomics-header h2 {
+    font-size: 3.2rem;
+  }
+  
+  .token-info-container {
+    max-width: 800px;
+  }
+  
+  .main-token-card {
+    padding: 1.8rem;
+  }
+  
+  .contract-card {
+    padding: 1.8rem;
+  }
+  
+  .info-item {
+    padding: 1.6rem;
+  }
+  
+  .contract-address-container {
+    max-width: 750px;
+  }
+  
+  .contract-address {
+    font-size: 1.25rem;
+    text-shadow: 0 0 18px rgba(0, 255, 255, 0.6);
+  }
+}
+
 @media (max-width: 1200px) {
   .tokenomics {
     padding: 100px 30px;
@@ -85,11 +245,11 @@
   }
   
   .token-info-grid {
-    gap: 1.8rem;
+    gap: 1.5rem;
   }
   
   .info-item {
-    padding: 1.8rem;
+    padding: 1.5rem;
   }
   
   .contract-address-container {
@@ -97,8 +257,8 @@
   }
   
   .contract-address {
-    font-size: 1.3rem;
-    text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    font-size: 1.2rem;
+    text-shadow: 0 0 16px rgba(0, 255, 255, 0.5);
   }
 }
 
@@ -116,27 +276,74 @@
   }
   
   .token-info-grid {
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
   }
   
   .info-item {
-    padding: 1.5rem;
+    padding: 1.4rem;
   }
   
   .contract-address-container {
-    max-width: 600px;
+    max-width: 100%;
+    flex-direction: row;
+    gap: 1rem;
   }
   
   .contract-address {
     font-size: 1.1rem;
     text-shadow: 0 0 18px rgba(0, 255, 255, 0.5);
+    word-break: break-all;
+  }
+  
+  .copy-button {
+    min-width: 45px;
+    height: 38px;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  .token-info-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
+  .tokenomics {
+    padding: 80px 20px;
+  }
+  
+  .tokenomics-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .tokenomics-header p {
+    font-size: 1.1rem;
+  }
+  
+  .token-info-container {
+    gap: 1.5rem;
+  }
+  
+  .main-token-card {
+    padding: 1.5rem;
+  }
+  
+  .token-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .token-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contract-card {
+    padding: 1.5rem;
+  }
+  
+  .contract-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
   
   .info-item {
@@ -144,15 +351,89 @@
   }
   
   .contract-address-container {
-    max-width: 500px;
+    max-width: 100%;
+    flex-direction: row;
+    gap: 0.8rem;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .contract-address {
+    font-size: 0.9rem;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    word-break: break-all;
+  }
+  
+  .copy-button {
+    min-width: 40px;
+    height: 35px;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .tokenomics {
+    padding: 75px 18px;
+  }
+  
+  .tokenomics-header h2 {
+    font-size: 2.3rem;
+  }
+  
+  .tokenomics-header p {
+    font-size: 1rem;
+  }
+  
+  .token-info-container {
+    gap: 1.2rem;
+  }
+  
+  .main-token-card {
+    padding: 1.2rem;
+  }
+  
+  .token-details h4 {
+    font-size: 1.6rem;
+  }
+  
+  .token-details p {
+    font-size: 1rem;
+  }
+  
+  .stat-value {
+    font-size: 1.1rem;
+  }
+  
+  .contract-card {
+    padding: 1.2rem;
+  }
+  
+  .info-item {
+    padding: 1.2rem;
+  }
+  
+  .contract-address-container {
+    max-width: 100%;
+    padding: 0.9rem;
     flex-direction: column;
     gap: 0.8rem;
     text-align: center;
   }
   
   .contract-address {
-    font-size: 1rem;
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    font-size: 0.85rem;
+    text-shadow: 0 0 14px rgba(0, 255, 255, 0.4);
+    word-break: break-all;
+    line-height: 1.4;
+  }
+  
+  .copy-button {
+    min-width: 50px;
+    height: 42px;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    align-self: center;
   }
 }
 
@@ -178,23 +459,43 @@
     padding: 1.1rem;
   }
   
-  /* Hide Decimals card on mobile */
-  .decimals-card {
-    display: none;
-  }
-  
   .contract-address-container {
-    max-width: 400px;
+    max-width: 100%;
     padding: 0.8rem;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
   }
   
   .contract-address {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     text-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    word-break: break-all;
+    line-height: 1.4;
+  }
+  
+  .copy-button {
+    min-width: 45px;
+    height: 40px;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    align-self: center;
   }
 }
 
 @media (max-width: 480px) {
+  .tokenomics {
+    padding: 60px 12px;
+  }
+  
+  .tokenomics-header h2 {
+    font-size: 2rem;
+  }
+  
+  .tokenomics-header p {
+    font-size: 0.95rem;
+  }
+  
   .token-info-grid {
     grid-template-columns: 1fr;
     gap: 0.8rem;
@@ -204,29 +505,35 @@
     padding: 1rem;
   }
   
-  /* Hide Decimals card on mobile */
-  .decimals-card {
-    display: none;
-  }
-  
   .contract-address-container {
-    max-width: 350px;
+    max-width: 100%;
     padding: 0.7rem;
+    flex-direction: column;
+    gap: 0.6rem;
   }
   
   .contract-address {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    word-break: break-all;
+    line-height: 1.3;
+  }
+  
+  .copy-button {
+    min-width: 40px;
+    height: 35px;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .tokenomics {
-    padding: 50px 10px;
+    padding: 55px 10px;
   }
   
   .tokenomics-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   
   .tokenomics-header p {
@@ -237,19 +544,145 @@
     padding: 0.9rem;
   }
   
-  /* Hide Decimals card on mobile */
-  .decimals-card {
-    display: none;
-  }
-  
   .contract-address-container {
-    max-width: 300px;
+    max-width: 100%;
     padding: 0.6rem;
+    flex-direction: column;
+    gap: 0.5rem;
   }
   
   .contract-address {
+    font-size: 0.72rem;
+    text-shadow: 0 0 9px rgba(0, 255, 255, 0.3);
+    word-break: break-all;
+    line-height: 1.25;
+  }
+  
+  .copy-button {
+    min-width: 38px;
+    height: 32px;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .tokenomics {
+    padding: 50px 8px;
+  }
+  
+  .tokenomics-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .tokenomics-header p {
     font-size: 0.85rem;
+  }
+  
+  .info-item {
+    padding: 0.8rem;
+  }
+  
+  .contract-address-container {
+    max-width: 100%;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  
+  .contract-address {
+    font-size: 0.7rem;
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+    word-break: break-all;
+    line-height: 1.2;
+  }
+  
+  .copy-button {
+    min-width: 35px;
+    height: 30px;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .tokenomics {
+    padding: 45px 6px;
+  }
+  
+  .tokenomics-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .tokenomics-header p {
+    font-size: 0.8rem;
+  }
+  
+  .info-item {
+    padding: 0.7rem;
+  }
+  
+  .contract-address-container {
+    max-width: 100%;
+    padding: 0.4rem;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .contract-address {
+    font-size: 0.65rem;
+    text-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
+    word-break: break-all;
+    line-height: 1.15;
+  }
+  
+  .copy-button {
+    min-width: 32px;
+    height: 28px;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  .tokenomics {
+    padding: 40px 20px;
+  }
+  
+  .tokenomics-header h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tokenomics-header p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .token-info-grid {
+    gap: 0.8rem;
+  }
+  
+  .info-item {
+    padding: 0.8rem;
+  }
+  
+  .contract-address-container {
+    padding: 0.6rem;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  
+  .contract-address {
+    font-size: 0.8rem;
+  }
+  
+  .copy-button {
+    min-width: 40px;
+    height: 32px;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
@@ -455,75 +888,8 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .tokenomics {
-    padding: 80px 20px;
-  }
-  
-  .tokenomics-header h2 {
-    font-size: 2.5rem;
-  }
-  
-  .tokenomics-header p {
-    font-size: 1.125rem;
-  }
-  
-  .token-info-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .distribution-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-  
-  .distribution-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  
-  .security-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .token-info-section h3,
-  .distribution-section h3,
-  .security-section h3 {
-    font-size: 1.75rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .tokenomics-header h2 {
-    font-size: 2rem;
-  }
-  
-  .tokenomics-header p {
-    font-size: 1rem;
-  }
-  
-  .distribution-item,
-  .security-card {
-    padding: 1.5rem;
-  }
-  
-  .token-info-section h3,
-  .distribution-section h3,
-  .security-section h3 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Position decimals and network cards to the right */
-.info-item-shift-right {
-  position: relative;
-  left: 12rem;
-}
+/* Removed shift classes - using new grid layout */
 
 /* Contract Address Copyable */
 .contract-address-item {
@@ -557,4 +923,28 @@
   flex: 1;
   text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
   letter-spacing: 0.5px;
+}
+
+.copy-button {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 40px;
+}
+
+.copy-button:hover {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
 }

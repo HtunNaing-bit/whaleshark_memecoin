@@ -1,7 +1,7 @@
 /* Professional Community Statistics Styles */
 .community-stats {
   padding: 100px 20px;
-  background: #0f0f0f;
+  background: linear-gradient(135deg, #0f0f0f 0%, #0a1a0a 50%, #0f0f0f 100%);
   color: #ffffff;
   position: relative;
   overflow: hidden;

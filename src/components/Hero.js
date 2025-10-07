@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import './Hero.css';
 import './ButtonStyles.css';
@@ -25,13 +24,32 @@ const Hero = () => {
             <img src="/whale-shark-logo.svg" alt="WhaleShark Logo" />
           </div>
           <h2>WHALESHARK</h2>
-          <p>The Ocean's Most Powerful Meme Coin</p>
+          <p style={{
+            fontSize: '1.5rem',
+            fontWeight: '700',
+            color: '#ffffff',
+            marginBottom: '2rem',
+            fontFamily: "'Inter', sans-serif",
+            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #8b5cf6)',
+            backgroundSize: '200% 200%',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            animation: 'gradientShift 3s ease-in-out infinite'
+          }}>The Ocean's Most Powerful Meme Coin</p>
         </motion.div>
 
 
         {/* Hero Description Card */}
         <motion.div 
           className="hero-description-card"
+          style={{
+            border: '3px solid #00ffff',
+            background: 'rgba(0, 255, 255, 0.1)',
+            boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+            transform: 'scale(1.01)',
+            borderRadius: '12px'
+          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -39,7 +57,7 @@ const Hero = () => {
         >
           <div className="hero-description">
             <p>Dive deep into the crypto ocean with $whaleshark - launching on Pump.fun!</p>
-            <p>Our friendly whale shark is ready to devour the competition and graduate to CEX exchanges.</p>
+            <p>Our friendly $whaleshark is ready to devour the competition and graduate to CEX exchanges.</p>
             <p>Join the pod early and ride the wave to the moon!</p>
           </div>
         </motion.div>
@@ -54,18 +72,84 @@ const Hero = () => {
         >
           <h3>🎯 Why $whaleshark Will Moon</h3>
           <div className="philosophy-grid">
-            <div className="philosophy-item">
-              <div className="philosophy-icon">🏊</div>
-              <p>Swimming through the crypto markets with precision and power</p>
-            </div>
-            <div className="philosophy-item">
-              <div className="philosophy-icon">🦈</div>
-              <p>Devouring weak hands and market volatility with strategic moves</p>
-            </div>
-            <div className="philosophy-item">
-              <div className="philosophy-icon">🌙</div>
-              <p>Ready to moon with our dedicated community and strong fundamentals</p>
-            </div>
+            <motion.div
+              className="philosophy-item"
+              style={{
+                border: '3px solid #00ffff',
+                background: 'rgba(0, 255, 255, 0.1)',
+                boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+                transform: 'scale(1.02)',
+                borderRadius: '12px'
+              }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="philosophy-icon" style={{ 
+                color: '#00ffff',
+                textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
+                fontSize: '2rem'
+              }}>🏊</div>
+              <p style={{ 
+                color: '#ffffff',
+                textShadow: '0 0 8px rgba(0, 255, 255, 0.4)',
+                fontWeight: 'bold'
+              }}>Swimming through the crypto markets with precision and power</p>
+            </motion.div>
+            <motion.div
+              className="philosophy-item"
+              style={{
+                border: '3px solid #00ffff',
+                background: 'rgba(0, 255, 255, 0.1)',
+                boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+                transform: 'scale(1.02)',
+                borderRadius: '12px'
+              }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="philosophy-icon" style={{ 
+                color: '#00ffff',
+                textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
+                fontSize: '2rem'
+              }}>🦈</div>
+              <p style={{ 
+                color: '#ffffff',
+                textShadow: '0 0 8px rgba(0, 255, 255, 0.4)',
+                fontWeight: 'bold'
+              }}>Devouring weak hands and market volatility with strategic moves</p>
+            </motion.div>
+            <motion.div
+              className="philosophy-item"
+              style={{
+                border: '3px solid #00ffff',
+                background: 'rgba(0, 255, 255, 0.1)',
+                boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+                transform: 'scale(1.02)',
+                borderRadius: '12px'
+              }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="philosophy-icon" style={{ 
+                color: '#00ffff',
+                textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
+                fontSize: '2rem'
+              }}>🌙</div>
+              <p style={{ 
+                color: '#ffffff',
+                textShadow: '0 0 8px rgba(0, 255, 255, 0.4)',
+                fontWeight: 'bold'
+              }}>Ready to moon with our dedicated community and strong fundamentals</p>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -82,6 +166,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary btn-follow-x"
+            style={{ lineHeight: '1.6' }}
             whileHover={{
               scale: 1.05,
               y: -5,
@@ -97,6 +182,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary"
+            style={{ lineHeight: '1.6' }}
             whileHover={{
               scale: 1.05,
               y: -5,
@@ -112,6 +198,7 @@ const Hero = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-secondary btn-dexscreener"
+            style={{ lineHeight: '1.6' }}
             whileHover={{
               scale: 1.05,
               y: -5,
@@ -127,6 +214,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary btn-telegram"
+            style={{ lineHeight: '1.6' }}
             whileHover={{
               scale: 1.05,
               y: -5,

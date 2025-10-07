@@ -1,8 +1,19 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import { motion } from 'framer-motion';
 import './Tokenomics.css';
 
 const Tokenomics = memo(() => {
+  const [copied, setCopied] = useState(false);
+  
+  const copyContractAddress = async () => {
+    try {
+      await navigator.clipboard.writeText(tokenInfo.contract);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
   
   const tokenInfo = {
     name: "WHALESHARK",
@@ -10,7 +21,7 @@ const Tokenomics = memo(() => {
     totalSupply: "1,000,000,000",
     decimals: 9,
     network: "Solana",
-    contract: "7a8b9c2d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6"
+    contract: "Contract address is coming soon"
   };
 
 
@@ -90,8 +101,30 @@ const Tokenomics = memo(() => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2>Tokenomics</h2>
-          <p>Transparent token distribution designed for sustainable growth and community success</p>
+          <h2 style={{
+            fontSize: '4.5rem',
+            fontWeight: '800',
+            marginBottom: '1rem',
+            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            letterSpacing: '-0.02em',
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+          }}>Tokenomics</h2>
+          <p style={{
+            fontSize: '1.5rem',
+            fontWeight: '700',
+            color: '#ffffff',
+            marginBottom: '2rem',
+            fontFamily: "'Inter', sans-serif",
+            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #8b5cf6)',
+            backgroundSize: '200% 200%',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            animation: 'gradientShift 3s ease-in-out infinite'
+          }}>Transparent token distribution designed for sustainable growth and community success</p>
         </motion.div>
 
         {/* Token Information */}
@@ -102,32 +135,56 @@ const Tokenomics = memo(() => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h3>Token Information</h3>
-          <div className="token-info-grid">
-            <div className="info-item">
-              <span className="info-label">Token Name</span>
-              <span className="info-value">{tokenInfo.name}</span>
+          <h3 style={{
+            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>Token Information</h3>
+          <div className="token-info-container">
+            {/* Main Token Card */}
+            <div className="main-token-card">
+              <div className="token-header">
+                <div className="token-logo">🦈</div>
+                <div className="token-details">
+                  <h4>{tokenInfo.name}</h4>
+                  <p>{tokenInfo.symbol}</p>
+                </div>
+              </div>
+              <div className="token-stats">
+                <div className="stat-item">
+                  <span className="stat-label">Total Supply</span>
+                  <span className="stat-value">{tokenInfo.totalSupply}</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-label">Decimals</span>
+                  <span className="stat-value">{tokenInfo.decimals}</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-label">Network</span>
+                  <span className="stat-value">{tokenInfo.network}</span>
+                </div>
+              </div>
             </div>
-            <div className="info-item">
-              <span className="info-label">Symbol</span>
-              <span className="info-value">{tokenInfo.symbol}</span>
-            </div>
-            <div className="info-item">
-              <span className="info-label">Total Supply</span>
-              <span className="info-value">{tokenInfo.totalSupply}</span>
-            </div>
-            <div className="info-item info-item-shift-right decimals-card">
-              <span className="info-label">Decimals</span>
-              <span className="info-value">{tokenInfo.decimals}</span>
-            </div>
-            <div className="info-item info-item-shift-right">
-              <span className="info-label">Network</span>
-              <span className="info-value">{tokenInfo.network}</span>
-            </div>
-            <div className="info-item contract-address-item">
-              <span className="info-label">Contract Address</span>
-              <div className="contract-address-container">
-                <span className="info-value contract-address">Coming Soon</span>
+            
+            {/* Contract Address Card */}
+            <div className="contract-card">
+              <div className="contract-header">
+                <span className="contract-label">Contract Address</span>
+                {tokenInfo.contract !== "Contract address is coming soon" && (
+                  <motion.button
+                    className="copy-button"
+                    onClick={copyContractAddress}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    {copied ? '✓ Copied' : '📋 Copy'}
+                  </motion.button>
+                )}
+              </div>
+              <div className="contract-address">
+                <span className="coming-soon-text">{tokenInfo.contract}</span>
               </div>
             </div>
           </div>
@@ -141,12 +198,24 @@ const Tokenomics = memo(() => {
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3>Token Distribution</h3>
+          <h3 style={{
+            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>Token Distribution</h3>
           <div className="distribution-chart">
             {distribution.map((item, index) => (
               <motion.div
                 key={item.category}
                 className="distribution-item"
+                style={{
+                  border: '3px solid #00ffff',
+                  background: 'rgba(0, 255, 255, 0.1)',
+                  boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+                  transform: 'scale(1.02)',
+                  borderRadius: '12px'
+                }}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
@@ -183,12 +252,24 @@ const Tokenomics = memo(() => {
           transition={{ duration: 0.8, delay: 1 }}
           viewport={{ once: true }}
         >
-          <h3>Security & Transparency</h3>
+          <h3 style={{
+            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>Security & Transparency</h3>
           <div className="security-grid">
             {securityFeatures.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 className="security-card"
+                style={{
+                  border: '3px solid #00ffff',
+                  background: 'rgba(0, 255, 255, 0.1)',
+                  boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+                  transform: 'scale(1.02)',
+                  borderRadius: '12px'
+                }}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}

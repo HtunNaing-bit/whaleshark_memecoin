@@ -97,8 +97,30 @@ const CommunityStats = memo(() => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2>Community Statistics</h2>
-          <p>Join the growing WhaleShark community and be part of the ocean's most powerful meme coin!</p>
+          <h2 style={{
+            fontSize: '4.5rem',
+            fontWeight: '800',
+            marginBottom: '1rem',
+            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            letterSpacing: '-0.02em',
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+          }}>Community Statistics</h2>
+          <p style={{
+            fontSize: '1.5rem',
+            fontWeight: '700',
+            color: '#ffffff',
+            marginBottom: '2rem',
+            fontFamily: "'Inter', sans-serif",
+            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #8b5cf6)',
+            backgroundSize: '200% 200%',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            animation: 'gradientShift 3s ease-in-out infinite'
+          }}>Join the growing $whaleshark community and be part of the ocean's most powerful meme coin!</p>
         </motion.div>
 
         {/* Stats Grid */}
@@ -113,6 +135,13 @@ const CommunityStats = memo(() => {
             <motion.div
               key={stat.label}
               className="stat-card"
+              style={{
+                border: '3px solid #00ffff',
+                background: 'rgba(0, 255, 255, 0.1)',
+                boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+                transform: 'scale(1.02)',
+                borderRadius: '12px'
+              }}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
