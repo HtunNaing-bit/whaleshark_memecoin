@@ -1,108 +1,146 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import './Hero.css';
+import './ButtonStyles.css';
 
-const Hero = memo(() => {
+const Hero = () => {
   return (
-    <section className="hero">
-      <div className="hero-content">
+    <motion.section 
+      className="hero"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <div className="hero-container">
+        {/* Hero Header */}
         <motion.div 
-          className="hero-image"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          className="hero-header"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
         >
-          <img src="./whale-shark-logo.svg" alt="whale shark wif backpack" className="hero-logo" />
+          <div className="hero-logo">
+            <img src="/whale-shark-logo.svg" alt="WhaleShark Logo" />
+          </div>
+          <h2>WHALESHARK</h2>
+          <p>The Ocean's Most Powerful Meme Coin</p>
         </motion.div>
-        
-        <motion.h1
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          $whaleshark
-        </motion.h1>
-        
-        <motion.p 
-          className="hero-subtitle"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7 }}
-        >
-          The Ocean's Most Powerful Meme Coin 🦈🌊
-        </motion.p>
-        
-        <motion.p 
-          className="hero-description"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9 }}
-        >
-          Dive deep into the crypto ocean with WhaleShark - launching on Pump.fun! 
-          Our friendly whale shark is ready to devour the competition and graduate to Raydium. 
-          Join the pod early and ride the wave to the moon! 🚀🌊
-        </motion.p>
-        
+
+
+        {/* Hero Description Card */}
         <motion.div 
-          className="hero-stats"
+          className="hero-description-card"
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
         >
-          <div className="stat-item">
-            <span className="stat-number">1B</span>
-            <span className="stat-label">Total Supply</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">0%</span>
-            <span className="stat-label">Tax</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">100%</span>
-            <span className="stat-label">Community</span>
+          <div className="hero-description">
+            <p>Dive deep into the crypto ocean with $whaleshark - launching on Pump.fun!</p>
+            <p>Our friendly whale shark is ready to devour the competition and graduate to CEX exchanges.</p>
+            <p>Join the pod early and ride the wave to the moon!</p>
           </div>
         </motion.div>
-        
+
+        {/* Hero Philosophy Section */}
+        <motion.div 
+          className="hero-philosophy-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h3>🎯 Why $whaleshark Will Moon</h3>
+          <div className="philosophy-grid">
+            <div className="philosophy-item">
+              <div className="philosophy-icon">🏊</div>
+              <p>Swimming through the crypto markets with precision and power</p>
+            </div>
+            <div className="philosophy-item">
+              <div className="philosophy-icon">🦈</div>
+              <p>Devouring weak hands and market volatility with strategic moves</p>
+            </div>
+            <div className="philosophy-item">
+              <div className="philosophy-icon">🌙</div>
+              <p>Ready to moon with our dedicated community and strong fundamentals</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Action Buttons */}
         <motion.div 
           className="hero-buttons"
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          viewport={{ once: true }}
         >
-          <motion.a 
-            href="https://pump.fun" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="btn btn-primary"
-            whileHover={{ 
-              scale: 1.05, 
+          <motion.a
+            href="https://x.com/whaleshark_coin?s=21"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary btn-follow-x"
+            whileHover={{
+              scale: 1.05,
               y: -5,
-              boxShadow: "0 0 30px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.3)"
+              boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3), 0 0 100px rgba(0, 255, 255, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            🚀 Launch on Pump.fun
+            FOLLOW ON X
+          </motion.a>
+          <motion.a
+            href="https://pump.fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+            whileHover={{
+              scale: 1.05,
+              y: -5,
+              boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3), 0 0 100px rgba(0, 255, 255, 0.4)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            🚀 BUY NOW
           </motion.a>
           <motion.a 
-            href="https://raydium.io" 
+            href="https://dexscreener.com" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="btn btn-secondary"
-            whileHover={{ 
-              scale: 1.05, 
+            className="btn btn-secondary btn-dexscreener"
+            whileHover={{
+              scale: 1.05,
               y: -5,
-              boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3)"
+              boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3), 0 0 100px rgba(0, 255, 255, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            🌊 Trade on Raydium
+            📊 DEXSCREENER
+          </motion.a>
+          <motion.a
+            href="https://t.me/whaleshark_coin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary btn-telegram"
+            whileHover={{
+              scale: 1.05,
+              y: -5,
+              boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3), 0 0 100px rgba(0, 255, 255, 0.4)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            JOIN ON TELEGRAM
           </motion.a>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
-});
+};
 
 export default Hero;
