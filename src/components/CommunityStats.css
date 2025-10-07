@@ -147,6 +147,57 @@
 }
 
 /* Responsive Design */
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .community-stats {
+    padding: 100px 30px;
+  }
+  
+  .community-stats-header h2 {
+    font-size: 3rem;
+  }
+  
+  .stats-grid {
+    gap: 2rem;
+  }
+  
+  .stat-card {
+    padding: 2.5rem;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .community-stats {
+    padding: 90px 25px;
+  }
+  
+  .community-stats-header h2 {
+    font-size: 2.8rem;
+  }
+  
+  .community-stats-header p {
+    font-size: 1.2rem;
+  }
+  
+  .stats-grid {
+    gap: 1.8rem;
+  }
+  
+  .stat-card {
+    padding: 2.2rem;
+    min-height: 260px;
+  }
+  
+  .stat-value {
+    font-size: 2.8rem;
+  }
+  
+  .stat-icon {
+    font-size: 2.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .community-stats {
     padding: 80px 20px;
@@ -180,9 +231,13 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .community-stats {
+    padding: 70px 15px;
+  }
+  
   .community-stats-header h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   
   .community-stats-header p {
@@ -195,8 +250,8 @@
   }
   
   .stat-card {
-    padding: 2rem;
-    min-height: 220px;
+    padding: 1.8rem;
+    min-height: 230px;
   }
   
   .stat-value {
@@ -205,5 +260,59 @@
   
   .stat-icon {
     font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .community-stats {
+    padding: 60px 15px;
+  }
+  
+  .community-stats-header h2 {
+    font-size: 2rem;
+  }
+  
+  .community-stats-header p {
+    font-size: 0.95rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+    min-height: 220px;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .community-stats {
+    padding: 50px 10px;
+  }
+  
+  .community-stats-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .community-stats-header p {
+    font-size: 0.9rem;
+  }
+  
+  .stat-card {
+    padding: 1.25rem;
+    min-height: 200px;
+  }
+  
+  .stat-value {
+    font-size: 1.8rem;
+  }
+  
+  .stat-icon {
+    font-size: 1.8rem;
   }
 }

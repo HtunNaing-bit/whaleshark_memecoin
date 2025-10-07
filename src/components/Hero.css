@@ -239,7 +239,51 @@
   min-width: 180px;
 }
 
-/* Responsive Design */
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .hero {
+    padding: 100px 30px;
+  }
+  
+  .hero-header h2 {
+    font-size: 4rem;
+  }
+  
+  .hero-buttons {
+    max-width: 900px;
+  }
+  
+  .hero-buttons .btn {
+    min-width: 170px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 90px 25px;
+  }
+  
+  .hero-header h2 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-header p {
+    font-size: 1.2rem;
+  }
+  
+  .hero-buttons {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    max-width: 700px;
+  }
+  
+  .hero-buttons .btn {
+    min-width: 160px;
+    flex: 1;
+    max-width: 200px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 80px 20px;
@@ -272,16 +316,18 @@
     padding: 0.7rem 1.5rem;
     font-size: 0.85rem;
     min-width: 160px;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .hero {
-    padding: 60px 20px;
+    padding: 70px 15px;
   }
   
   .hero-header h2 {
     font-size: 2.5rem;
+    line-height: 1.1;
   }
   
   .hero-header p {
@@ -294,5 +340,72 @@
   
   .hero-description p {
     font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .hero-buttons {
+    max-width: 300px;
+  }
+  
+  .hero-buttons .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 15px;
+  }
+  
+  .hero-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-header p {
+    font-size: 0.95rem;
+  }
+  
+  .hero-content-card {
+    padding: 1rem;
+  }
+  
+  .hero-description p {
+    font-size: 0.9rem;
+  }
+  
+  .hero-buttons {
+    max-width: 280px;
+  }
+  
+  .hero-buttons .btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.75rem;
+    min-width: 130px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    padding: 50px 10px;
+  }
+  
+  .hero-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-header p {
+    font-size: 0.9rem;
+  }
+  
+  .hero-buttons {
+    max-width: 250px;
+  }
+  
+  .hero-buttons .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.7rem;
+    min-width: 120px;
   }
 }

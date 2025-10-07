@@ -1,9 +1,8 @@
-import React, { memo, useState } from 'react';
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import './Tokenomics.css';
 
 const Tokenomics = memo(() => {
-  const [copied, setCopied] = useState(false);
   
   const tokenInfo = {
     name: "WHALESHARK",
@@ -14,15 +13,6 @@ const Tokenomics = memo(() => {
     contract: "7a8b9c2d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6"
   };
 
-  const copyContractAddress = async () => {
-    try {
-      await navigator.clipboard.writeText(tokenInfo.contract);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    }
-  };
 
   const distribution = [
     {
@@ -126,7 +116,7 @@ const Tokenomics = memo(() => {
               <span className="info-label">Total Supply</span>
               <span className="info-value">{tokenInfo.totalSupply}</span>
             </div>
-            <div className="info-item info-item-shift-right">
+            <div className="info-item info-item-shift-right decimals-card">
               <span className="info-label">Decimals</span>
               <span className="info-value">{tokenInfo.decimals}</span>
             </div>
@@ -137,16 +127,7 @@ const Tokenomics = memo(() => {
             <div className="info-item contract-address-item">
               <span className="info-label">Contract Address</span>
               <div className="contract-address-container">
-                <span className="info-value contract-address">{tokenInfo.contract}</span>
-                <motion.button
-                  className="copy-button"
-                  onClick={copyContractAddress}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  {copied ? '✓' : '📋'}
-                </motion.button>
+                <span className="info-value contract-address">Coming Soon</span>
               </div>
             </div>
           </div>
