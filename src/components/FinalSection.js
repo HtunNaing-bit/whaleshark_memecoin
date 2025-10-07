@@ -59,11 +59,37 @@ const FinalSection = memo(() => {
           viewport={{ once: true }}
         >
           <h2 style={{
+            fontSize: '2.7rem',
             background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>{finalData.title}</h2>
+            backgroundClip: 'text',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '1rem'
+          }}>
+            <motion.img 
+              src="/whale-shark-logo.svg" 
+              alt="WhaleShark Logo" 
+              style={{ 
+                width: '50px', 
+                height: '50px',
+                filter: 'hue-rotate(300deg) drop-shadow(0 0 10px rgba(0, 255, 255, 0.5))'
+              }}
+              animate={{ 
+                rotate: 360,
+                scale: [1, 1.1, 1],
+                filter: ['brightness(1)', 'brightness(1.3)', 'brightness(1)']
+              }}
+              transition={{ 
+                rotate: { duration: 6, repeat: Infinity, ease: "linear" },
+                scale: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
+                filter: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+              }}
+            />
+            {finalData.title}
+          </h2>
           <p style={{
             background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #8b5cf6)',
             backgroundSize: '200% 200%',
@@ -98,6 +124,18 @@ const FinalSection = memo(() => {
               transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
+              animate={{ 
+                y: [0, -8, 0],
+                boxShadow: [
+                  '0 0 20px rgba(0, 255, 255, 0.3)',
+                  '0 0 30px rgba(0, 255, 255, 0.5)',
+                  '0 0 20px rgba(0, 255, 255, 0.3)'
+                ]
+              }}
+              transition={{
+                y: { duration: 4 + index * 0.3, repeat: Infinity, ease: "easeInOut" },
+                boxShadow: { duration: 4 + index * 0.3, repeat: Infinity, ease: "easeInOut" }
+              }}
             >
               <div className="feature-icon">{feature.icon}</div>
               <h3>{feature.title}</h3>

@@ -98,7 +98,7 @@ const CommunityStats = memo(() => {
           viewport={{ once: true }}
         >
           <h2 style={{
-            fontSize: '4.5rem',
+            fontSize: '2.7rem',
             fontWeight: '800',
             marginBottom: '1rem',
             background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
@@ -106,10 +106,35 @@ const CommunityStats = memo(() => {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             letterSpacing: '-0.02em',
-            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-          }}>Community Statistics</h2>
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '1rem'
+          }}>
+            <motion.img 
+              src="/whale-shark-logo.svg" 
+              alt="WhaleShark Logo" 
+              style={{ 
+                width: '50px', 
+                height: '50px',
+                filter: 'hue-rotate(120deg) drop-shadow(0 0 10px rgba(0, 255, 255, 0.5))'
+              }}
+              animate={{ 
+                rotate: 360,
+                scale: [1, 1.1, 1],
+                filter: ['brightness(1)', 'brightness(1.3)', 'brightness(1)']
+              }}
+              transition={{ 
+                rotate: { duration: 6, repeat: Infinity, ease: "linear" },
+                scale: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
+                filter: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+              }}
+            />
+            Community Statistics
+          </h2>
           <p style={{
-            fontSize: '1.5rem',
+            fontSize: '1.3rem',
             fontWeight: '700',
             color: '#ffffff',
             marginBottom: '2rem',
@@ -144,9 +169,21 @@ const CommunityStats = memo(() => {
               }}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
+              animate={{ 
+                y: [0, -5, 0],
+                boxShadow: [
+                  '0 0 20px rgba(0, 255, 255, 0.3)',
+                  '0 0 25px rgba(0, 255, 255, 0.4)',
+                  '0 0 20px rgba(0, 255, 255, 0.3)'
+                ]
+              }}
+              transition={{
+                y: { duration: 3 + index * 0.5, repeat: Infinity, ease: "easeInOut" },
+                boxShadow: { duration: 3 + index * 0.5, repeat: Infinity, ease: "easeInOut" },
+                initial: { duration: 0.6, delay: 0.6 + index * 0.1 }
+              }}
             >
               <div className="stat-icon">{stat.icon}</div>
               <div className="stat-content">
