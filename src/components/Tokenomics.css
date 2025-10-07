@@ -95,6 +95,11 @@
   .contract-address-container {
     max-width: 700px;
   }
+  
+  .contract-address {
+    font-size: 1.3rem;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  }
 }
 
 @media (max-width: 992px) {
@@ -123,7 +128,8 @@
   }
   
   .contract-address {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
+    text-shadow: 0 0 18px rgba(0, 255, 255, 0.5);
   }
 }
 
@@ -145,12 +151,8 @@
   }
   
   .contract-address {
-    font-size: 0.8rem;
-    word-break: break-all;
-  }
-  
-  .copy-button {
-    align-self: center;
+    font-size: 1rem;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
   }
 }
 
@@ -187,12 +189,8 @@
   }
   
   .contract-address {
-    font-size: 0.75rem;
-  }
-  
-  .copy-button {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
   }
 }
 
@@ -217,12 +215,8 @@
   }
   
   .contract-address {
-    font-size: 0.7rem;
-  }
-  
-  .copy-button {
-    padding: 0.35rem 0.5rem;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
   }
 }
 
@@ -254,12 +248,8 @@
   }
   
   .contract-address {
-    font-size: 0.65rem;
-  }
-  
-  .copy-button {
-    padding: 0.3rem 0.4rem;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
   }
 }
 
@@ -560,10 +550,11 @@
 
 .contract-address {
   font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #00ffff;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   flex: 1;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  letter-spacing: 0.5px;
 }
