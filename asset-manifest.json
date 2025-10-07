@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/whaleshark_memecoin/static/css/main.55f10ca5.css",
-    "main.js": "/whaleshark_memecoin/static/js/main.85c53c83.js",
-    "index.html": "/whaleshark_memecoin/index.html",
-    "main.55f10ca5.css.map": "/whaleshark_memecoin/static/css/main.55f10ca5.css.map",
-    "main.85c53c83.js.map": "/whaleshark_memecoin/static/js/main.85c53c83.js.map"
+    "main.css": "/static/css/main.f997ea0d.css",
+    "main.js": "/static/js/main.86e2b0f7.js",
+    "index.html": "/index.html",
+    "main.f997ea0d.css.map": "/static/css/main.f997ea0d.css.map",
+    "main.86e2b0f7.js.map": "/static/js/main.86e2b0f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.55f10ca5.css",
-    "static/js/main.85c53c83.js"
+    "static/css/main.f997ea0d.css",
+    "static/js/main.86e2b0f7.js"
   ]
 }
