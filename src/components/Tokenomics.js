@@ -192,7 +192,7 @@ const Tokenomics = memo(() => {
                   </motion.div>
                   <div>
                     <h4 style={{
-                      fontSize: '2.2rem',
+                      fontSize: '1.8rem',
                       fontWeight: '700',
                       color: '#ffffff',
                       margin: '0 0 0.5rem 0',
