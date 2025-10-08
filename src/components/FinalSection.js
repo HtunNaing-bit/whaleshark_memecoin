@@ -4,36 +4,36 @@ import './FinalSection.css';
 
 const FinalSection = memo(() => {
   const finalData = {
-    title: "Join the WHALESHARK Revolution",
-    subtitle: "Ready to dive deep into the crypto ocean? Join our community and be part of the most powerful meme coin movement!",
+    title: "🦈 JOIN THE SHARK REVOLUTION! 🦈",
+    subtitle: "🦈 Ready to BITE into the crypto ocean? Our SHARK POD is HUNGRY for gains and ready to DEVOUR the competition! 🦈",
     features: [
       {
-        title: "Community First",
-        description: "Built by the community, for the community. Every decision is made with our holders in mind.",
-        icon: "👥"
+        title: "🦈 Shark Pod First",
+        description: "🦈 We HUNT together, we EAT together! Our pod is STRONGER than any school of fish! 🦈",
+        icon: "🦈"
       },
       {
-        title: "Transparent & Secure",
-        description: "Fully audited smart contracts with transparent tokenomics and locked liquidity.",
-        icon: "🔒"
+        title: "🛡️ Shark Armor Security",
+        description: "🦈 Our jaws are LOCKED on liquidity! Even other sharks can't bite us! We're BULLETPROOF! 🦈",
+        icon: "🛡️"
       },
       {
-        title: "Moon Mission",
-        description: "Our goal is simple: take $whaleshark to the moon and beyond with strategic partnerships.",
+        title: "🌙 Moon Hunting Mission",
+        description: "🦈 Our goal is SIMPLE: HUNT the moon and EAT all the gains! We're the PREDATORS of space! 🦈",
         icon: "🌙"
       }
     ],
     cta: {
-      title: "Ready to Join the Pod?",
-      description: "Don't miss out on the biggest meme coin opportunity. Join our community today!",
+      title: "🦈 Ready to JOIN THE POD? 🦈",
+      description: "🦈 Don't be the fish that got away! Join our HUNGRY shark pod before we EAT all the gains! 🦈",
       buttons: [
         {
-          text: "Buy on Pump.fun",
+          text: "🦈 HUNT on Pump.fun 🦈",
           href: "https://pump.fun",
           primary: true
         },
         {
-          text: "Join Telegram",
+          text: "🦈 Join Shark Pod 🦈",
           href: "https://t.me/whaleshark_coin",
           primary: false
         }
@@ -121,7 +121,6 @@ const FinalSection = memo(() => {
               }}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
               animate={{ 
@@ -133,6 +132,8 @@ const FinalSection = memo(() => {
                 ]
               }}
               transition={{
+                duration: 0.6,
+                delay: 0.6 + index * 0.1,
                 y: { duration: 4 + index * 0.3, repeat: Infinity, ease: "easeInOut" },
                 boxShadow: { duration: 4 + index * 0.3, repeat: Infinity, ease: "easeInOut" }
               }}
@@ -153,34 +154,87 @@ const FinalSection = memo(() => {
           viewport={{ once: true }}
         >
           <div className="cta-content" style={{
-            border: '3px solid #00ffff',
-            background: 'rgba(0, 255, 255, 0.1)',
-            boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+            border: '4px solid #00ffff',
+            background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.15) 0%, rgba(0, 150, 255, 0.15) 50%, rgba(255, 107, 157, 0.15) 100%)',
+            boxShadow: '0 0 30px rgba(0, 255, 255, 0.4), inset 0 0 20px rgba(0, 255, 255, 0.1)',
             transform: 'scale(1.02)',
-            borderRadius: '12px',
-            padding: '2rem'
+            borderRadius: '20px',
+            padding: '3rem',
+            position: 'relative',
+            overflow: 'hidden',
+            backdropFilter: 'blur(10px)'
           }}>
-            <h3 style={{
-              background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>{finalData.cta.title}</h3>
-            <p style={{
-              color: '#94a3b8'
-            }}>{finalData.cta.description}</p>
-            <div className="cta-buttons">
-              {finalData.cta.buttons.map((button, index) => (
-                <motion.a
-                  key={button.text}
-                  href={button.href}
-                  className={`cta-button ${button.primary ? 'primary' : 'secondary'}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {button.text}
-                </motion.a>
-              ))}
+            {/* Animated Background Elements */}
+            <div style={{
+              position: 'absolute',
+              top: '-50%',
+              left: '-50%',
+              width: '200%',
+              height: '200%',
+              background: 'radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(255, 107, 157, 0.1) 0%, transparent 50%)',
+              animation: 'rotate 20s linear infinite',
+              zIndex: 1
+            }} />
+            
+            {/* Content */}
+            <div style={{ position: 'relative', zIndex: 2 }}>
+              <h3 style={{
+                background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontSize: '2.2rem',
+                fontWeight: '800',
+                marginBottom: '1.5rem',
+                textAlign: 'center'
+              }}>{finalData.cta.title}</h3>
+              <p style={{
+                color: '#ffffff',
+                fontSize: '1.2rem',
+                textAlign: 'center',
+                marginBottom: '2rem',
+                fontWeight: '500',
+                textShadow: '0 0 10px rgba(0, 255, 255, 0.3)'
+              }}>{finalData.cta.description}</p>
+              <div className="cta-buttons" style={{
+                display: 'flex',
+                gap: '1rem',
+                justifyContent: 'center',
+                flexWrap: 'wrap'
+              }}>
+                {finalData.cta.buttons.map((button, index) => (
+                  <motion.a
+                    key={button.text}
+                    href={button.href}
+                    className={`cta-button ${button.primary ? 'primary' : 'secondary'}`}
+                    style={{
+                      padding: '1rem 2rem',
+                      borderRadius: '12px',
+                      textDecoration: 'none',
+                      fontWeight: '700',
+                      fontSize: '1.1rem',
+                      border: button.primary ? '2px solid #00ffff' : '2px solid rgba(255, 255, 255, 0.3)',
+                      background: button.primary 
+                        ? 'linear-gradient(45deg, #00d4ff, #0099cc)' 
+                        : 'rgba(255, 255, 255, 0.1)',
+                      color: '#ffffff',
+                      backdropFilter: 'blur(10px)',
+                      boxShadow: button.primary 
+                        ? '0 0 20px rgba(0, 255, 255, 0.4)' 
+                        : '0 0 15px rgba(255, 255, 255, 0.2)'
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: button.primary 
+                        ? '0 0 30px rgba(0, 255, 255, 0.6)' 
+                        : '0 0 25px rgba(255, 255, 255, 0.4)'
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {button.text}
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>

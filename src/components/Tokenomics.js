@@ -26,20 +26,20 @@ const Tokenomics = memo(() => {
 
   const securityFeatures = [
     {
-      title: "Liquidity Locked",
-      description: "100% of liquidity is locked for 24 months",
+      title: "🦈 Shark Teeth Locked",
+      description: "Our jaws are LOCKED on liquidity for 24 months! No escape!",
       status: "Verified",
       icon: "🔒"
     },
     {
-      title: "Smart Contract Audit",
-      description: "Contract audited by certified security firm",
+      title: "🛡️ Shark Armor",
+      description: "Our contract is BULLETPROOF! Even other sharks can't bite us!",
       status: "Completed",
       icon: "🛡️"
     },
     {
-      title: "Transparent Distribution",
-      description: "All token allocations are publicly documented",
+      title: "🌊 Crystal Clear Waters",
+      description: "We're TRANSPARENT like the ocean! No hidden depths!",
       status: "Live",
       icon: "📊"
     }
@@ -72,31 +72,9 @@ const Tokenomics = memo(() => {
             backgroundClip: 'text',
             letterSpacing: '-0.02em',
             fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '1rem'
+            textAlign: 'center'
           }}>
-            <motion.img 
-              src="/whale-shark-logo.svg" 
-              alt="WhaleShark Logo" 
-              style={{ 
-                width: '50px', 
-                height: '50px',
-                filter: 'hue-rotate(60deg) drop-shadow(0 0 10px rgba(0, 255, 255, 0.5))'
-              }}
-              animate={{ 
-                rotate: 360,
-                scale: [1, 1.1, 1],
-                filter: ['brightness(1)', 'brightness(1.3)', 'brightness(1)']
-              }}
-              transition={{ 
-                rotate: { duration: 6, repeat: Infinity, ease: "linear" },
-                scale: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
-                filter: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
-              }}
-            />
-            Tokenomics
+            🦈 SHARK ECONOMICS 🦈
           </h2>
           <p style={{
             fontSize: '1.3rem',
@@ -110,7 +88,7 @@ const Tokenomics = memo(() => {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             animation: 'gradientShift 3s ease-in-out infinite'
-          }}>Built for the community, by the community - where every holder becomes part of the WhaleShark ecosystem</p>
+          }}>🦈 Our SHARK ECONOMICS are SIMPLE: We EAT the competition and SHARE the gains with our pod! 🦈</p>
         </motion.div>
 
         {/* Token Information */}
@@ -121,13 +99,6 @@ const Tokenomics = memo(() => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h3 style={{
-            fontSize: '2rem',
-            background: 'linear-gradient(45deg, #00d4ff, #ff6b9d, #00ff88)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>Token Information</h3>
           <div className="token-info-container">
             {/* New Modern Token Design */}
             <motion.div 
@@ -174,9 +145,12 @@ const Tokenomics = memo(() => {
                   paddingBottom: '1.5rem',
                   borderBottom: '1px solid rgba(0, 255, 255, 0.3)'
                 }}>
-                  <motion.div
+                  <motion.img
+                    src="/whale-shark-logo.svg"
+                    alt="WhaleShark Logo"
                     style={{
-                      fontSize: '3rem',
+                      width: '60px',
+                      height: '60px',
                       filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.6))'
                     }}
                     animate={{ 
@@ -187,9 +161,7 @@ const Tokenomics = memo(() => {
                       rotate: { duration: 8, repeat: Infinity, ease: "linear" },
                       scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                     }}
-                  >
-                    🦈
-                  </motion.div>
+                  />
                   <div>
                     <h4 style={{
                       fontSize: '1.8rem',

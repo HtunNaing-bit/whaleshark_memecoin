@@ -62,7 +62,7 @@ const Hero = () => {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             animation: 'gradientShift 3s ease-in-out infinite'
-          }}>The Ocean's Most Powerful Meme Coin</p>
+          }}>The Ocean's Most Powerful Coin</p>
         </motion.div>
 
 
@@ -82,9 +82,10 @@ const Hero = () => {
           viewport={{ once: true }}
         >
           <div className="hero-description">
-            <p>Dive deep into the crypto ocean with $whaleshark - launching on Pump.fun!</p>
-            <p>Our friendly $whaleshark is ready to devour the competition and graduate to CEX exchanges.</p>
-            <p>Join the pod early and ride the wave to the moon!</p>
+            <p>🦈 Our $whaleshark is HUNGRY for gains and ready to EAT the competition!</p>
+            <p>🐟 Unlike other coins that swim with the current, we're the PREDATOR of the crypto ocean!</p>
+            <p>🌊 Join the pod before we DEVOUR all the weak hands and swim to the moon! 🚀</p>
+            <p>💎 Our teeth are diamond hands, and we never let go of our prey! 💎</p>
           </div>
         </motion.div>
 
@@ -96,7 +97,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3>🎯 Why $whaleshark Will Moon</h3>
+          <h3>🦈 Why $whaleshark Will DEVOUR the Market</h3>
           <div className="philosophy-grid">
             <motion.div
               className="philosophy-item"
@@ -113,16 +114,29 @@ const Hero = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="philosophy-icon" style={{ 
-                color: '#00ffff',
-                textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
-                fontSize: '2rem'
-              }}>🏊</div>
+              <motion.div 
+                className="philosophy-icon" 
+                style={{ 
+                  color: '#00ffff',
+                  textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
+                  fontSize: '2rem'
+                }}
+                animate={{ 
+                  y: [0, -10, 0],
+                  rotate: [0, 5, -5, 0],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >🏊</motion.div>
               <p style={{ 
                 color: '#ffffff',
                 textShadow: '0 0 8px rgba(0, 255, 255, 0.4)',
                 fontWeight: 'bold'
-              }}>Swimming through the crypto markets with precision and power</p>
+              }}>🏊‍♂️ We don't just swim - we HUNT! Our precision strikes leave other coins trembling!</p>
             </motion.div>
             <motion.div
               className="philosophy-item"
@@ -151,16 +165,29 @@ const Hero = () => {
                 initial: { duration: 0.6, delay: 0.7 }
               }}
             >
-              <div className="philosophy-icon" style={{ 
-                color: '#00ffff',
-                textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
-                fontSize: '2rem'
-              }}>🦈</div>
+              <motion.div 
+                className="philosophy-icon" 
+                style={{ 
+                  color: '#00ffff',
+                  textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
+                  fontSize: '2rem'
+                }}
+                animate={{ 
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 10, -10, 0],
+                  y: [0, -5, 0]
+                }}
+                transition={{ 
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >🦈</motion.div>
               <p style={{ 
                 color: '#ffffff',
                 textShadow: '0 0 8px rgba(0, 255, 255, 0.4)',
                 fontWeight: 'bold'
-              }}>Devouring weak hands and market volatility with strategic moves</p>
+              }}>🦈 We EAT weak hands for breakfast! Our jaws never release diamond hands! 💎</p>
             </motion.div>
             <motion.div
               className="philosophy-item"
@@ -189,16 +216,29 @@ const Hero = () => {
                 initial: { duration: 0.6, delay: 0.8 }
               }}
             >
-              <div className="philosophy-icon" style={{ 
-                color: '#00ffff',
-                textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
-                fontSize: '2rem'
-              }}>🌙</div>
+              <motion.div 
+                className="philosophy-icon" 
+                style={{ 
+                  color: '#00ffff',
+                  textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
+                  fontSize: '2rem'
+                }}
+                animate={{ 
+                  y: [0, -15, 0],
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 15, -15, 0]
+                }}
+                transition={{ 
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >🌙</motion.div>
               <p style={{ 
                 color: '#ffffff',
                 textShadow: '0 0 8px rgba(0, 255, 255, 0.4)',
                 fontWeight: 'bold'
-              }}>Ready to moon with our dedicated community and strong fundamentals</p>
+              }}>🌙 Our pod is STRONGER than a school of fish! We moon together or we don't moon at all!</p>
             </motion.div>
           </div>
         </motion.div>
@@ -217,13 +257,21 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="btn btn-secondary btn-follow-x"
             style={{ lineHeight: '1.6' }}
+            animate={{
+              y: [0, -3, 0],
+              scale: [1, 1.02, 1]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
             whileHover={{
               scale: 1.05,
               y: -5,
               boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3), 0 0 100px rgba(0, 255, 255, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             FOLLOW ON X
           </motion.a>
@@ -233,13 +281,22 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="btn btn-secondary"
             style={{ lineHeight: '1.6' }}
+            animate={{
+              y: [0, -4, 0],
+              scale: [1, 1.03, 1],
+              rotate: [0, 2, -2, 0]
+            }}
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
             whileHover={{
               scale: 1.05,
               y: -5,
               boxShadow: "0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3), 0 0 100px rgba(0, 255, 255, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             🚀 BUY NOW
           </motion.a>

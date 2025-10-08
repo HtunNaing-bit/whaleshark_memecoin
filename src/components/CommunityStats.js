@@ -51,32 +51,32 @@ const CommunityStats = memo(() => {
 
   const communityData = [
     {
-      label: 'Holders',
+      label: 'Shark Pod',
       value: formatNumber(stats.holders),
-      description: 'Active community members',
+      description: '🦈 Hungry sharks ready to DEVOUR!',
       color: '#3b82f6',
-      icon: '👥'
-    },
-    {
-      label: 'Volume',
-      value: formatCurrency(stats.volume),
-      description: '24h trading volume',
-      color: '#10b981',
-      icon: '📊'
-    },
-    {
-      label: 'Market Cap',
-      value: formatCurrency(stats.marketCap),
-      description: 'Total market value',
-      color: '#f59e0b',
-      icon: '💰'
-    },
-    {
-      label: 'Liquidity',
-      value: formatCurrency(stats.liquidity),
-      description: 'Available liquidity pool',
-      color: '#8b5cf6',
       icon: '🦈'
+    },
+    {
+      label: 'Blood in Water',
+      value: formatCurrency(stats.volume),
+      description: '💀 Weak hands we\'ve EATEN today!',
+      color: '#10b981',
+      icon: '🩸'
+    },
+    {
+      label: 'Shark Tank',
+      value: formatCurrency(stats.marketCap),
+      description: '💰 Our hunting grounds value!',
+      color: '#f59e0b',
+      icon: '🏦'
+    },
+    {
+      label: 'Ocean Depth',
+      value: formatCurrency(stats.liquidity),
+      description: '🌊 How deep our waters run!',
+      color: '#8b5cf6',
+      icon: '🌊'
     }
   ];
 
@@ -107,31 +107,9 @@ const CommunityStats = memo(() => {
             backgroundClip: 'text',
             letterSpacing: '-0.02em',
             fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '1rem'
+            textAlign: 'center'
           }}>
-            <motion.img 
-              src="/whale-shark-logo.svg" 
-              alt="WhaleShark Logo" 
-              style={{ 
-                width: '50px', 
-                height: '50px',
-                filter: 'hue-rotate(120deg) drop-shadow(0 0 10px rgba(0, 255, 255, 0.5))'
-              }}
-              animate={{ 
-                rotate: 360,
-                scale: [1, 1.1, 1],
-                filter: ['brightness(1)', 'brightness(1.3)', 'brightness(1)']
-              }}
-              transition={{ 
-                rotate: { duration: 6, repeat: Infinity, ease: "linear" },
-                scale: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
-                filter: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
-              }}
-            />
-            Community Statistics
+            🦈 SHARK POD STATS 🦈
           </h2>
           <p style={{
             fontSize: '1.3rem',
@@ -145,7 +123,7 @@ const CommunityStats = memo(() => {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             animation: 'gradientShift 3s ease-in-out infinite'
-          }}>Join the growing $whaleshark community and be part of the ocean's most powerful meme coin!</p>
+          }}>🦈 Our SHARK POD is HUNGRY and growing! Join before we EAT all the gains! 🦈</p>
         </motion.div>
 
         {/* Stats Grid */}
@@ -185,7 +163,19 @@ const CommunityStats = memo(() => {
                 initial: { duration: 0.6, delay: 0.6 + index * 0.1 }
               }}
             >
-              <div className="stat-icon">{stat.icon}</div>
+              <motion.div 
+                className="stat-icon"
+                animate={{ 
+                  rotate: [0, 360],
+                  scale: [1, 1.2, 1],
+                  y: [0, -8, 0]
+                }}
+                transition={{ 
+                  duration: 3 + index * 0.3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >{stat.icon}</motion.div>
               <div className="stat-content">
                 <div className="stat-value">
                   {isLoading ? (
