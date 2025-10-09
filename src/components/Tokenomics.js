@@ -98,7 +98,7 @@ const Tokenomics = () => {
         >
           <motion.h2 
             style={{
-              fontSize: '5rem',
+              fontSize: '4rem',
               fontWeight: '900',
               marginBottom: '2rem',
               background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
@@ -125,7 +125,7 @@ const Tokenomics = () => {
           </motion.h2>
           <motion.p 
             style={{
-              fontSize: '1.8rem',
+              fontSize: '1.4rem',
               color: '#ffffff',
               maxWidth: '900px',
               margin: '0 auto',
@@ -278,7 +278,7 @@ const Tokenomics = () => {
               </div>
               
               <h4 style={{ 
-                fontSize: '2rem', 
+                fontSize: '1.6rem', 
                 fontWeight: '800', 
                 color: '#00ffff', 
                 marginBottom: '1.5rem', 
@@ -289,7 +289,7 @@ const Tokenomics = () => {
               </h4>
               <motion.p 
                 style={{ 
-                  fontSize: '3rem', 
+                  fontSize: '2.4rem', 
                   fontWeight: '900', 
                   color: '#ffffff', 
                   marginBottom: '1rem', 
@@ -312,7 +312,7 @@ const Tokenomics = () => {
                 1B $WHALE
               </motion.p>
               <p style={{ 
-                fontSize: '1.1rem', 
+                fontSize: '0.9rem', 
                 color: '#ffffff', 
                 opacity: 0.9,
                 transform: 'translateZ(15px)'
@@ -371,7 +371,7 @@ const Tokenomics = () => {
               </div>
               
               <h4 style={{ 
-                fontSize: '2rem', 
+                fontSize: '1.6rem', 
                 fontWeight: '800', 
                 color: '#00ff99', 
                 marginBottom: '1.5rem', 
@@ -382,7 +382,7 @@ const Tokenomics = () => {
               </h4>
               <motion.p 
                 style={{ 
-                  fontSize: '3rem', 
+                  fontSize: '2.4rem', 
                   fontWeight: '900', 
                   color: '#ffffff', 
                   marginBottom: '1rem', 
@@ -405,7 +405,7 @@ const Tokenomics = () => {
                 $50M+
               </motion.p>
               <p style={{ 
-                fontSize: '1.1rem', 
+                fontSize: '0.9rem', 
                 color: '#ffffff', 
                 opacity: 0.9,
                 transform: 'translateZ(15px)'
@@ -487,7 +487,7 @@ const Tokenomics = () => {
               </div>
               
               <h4 style={{ 
-                fontSize: '2rem', 
+                fontSize: '1.6rem', 
                 fontWeight: '800', 
                 color: '#ff6600', 
                 marginBottom: '1.5rem', 
@@ -498,7 +498,7 @@ const Tokenomics = () => {
               </h4>
               <motion.p 
                 style={{ 
-                  fontSize: '3rem', 
+                  fontSize: '2.4rem', 
                   fontWeight: '900', 
                   color: '#ffffff', 
                   marginBottom: '1rem', 
@@ -521,7 +521,7 @@ const Tokenomics = () => {
                 90%
               </motion.p>
               <p style={{ 
-                fontSize: '1.1rem', 
+                fontSize: '0.9rem', 
                 color: '#ffffff', 
                 opacity: 0.9,
                 transform: 'translateZ(15px)'
@@ -567,7 +567,7 @@ const Tokenomics = () => {
             >
               <motion.div
                 style={{
-                  fontSize: '1.2rem',
+                  fontSize: '1rem',
                   fontWeight: '600',
                   color: '#ffffff',
                   marginBottom: '1rem',
@@ -581,7 +581,7 @@ const Tokenomics = () => {
               
               <motion.div
                 style={{
-                  fontSize: '1rem',
+                  fontSize: '0.8rem',
                   fontFamily: 'monospace',
                   color: '#00ffff',
                   background: 'rgba(0, 0, 0, 0.3)',
@@ -628,7 +628,7 @@ const Tokenomics = () => {
               >
                 <motion.p
                   style={{
-                    fontSize: '0.9rem',
+                    fontSize: '0.8rem',
                     color: '#b8d4f0',
                     opacity: 0.8,
                     margin: 0
@@ -648,7 +648,7 @@ const Tokenomics = () => {
                     border: '2px solid rgba(0, 255, 255, 0.6)',
                     borderRadius: '8px',
                     padding: '0.5rem 1rem',
-                    fontSize: '0.9rem',
+                    fontSize: '0.8rem',
                     fontWeight: '600',
                     color: '#ffffff',
                     cursor: 'pointer',
@@ -714,7 +714,7 @@ const Tokenomics = () => {
           
           <div style={{ position: 'relative', zIndex: 2 }}>
             <h3 style={{
-              fontSize: '2.8rem',
+              fontSize: '2.2rem',
               fontWeight: '900',
               textAlign: 'center',
               marginBottom: '3rem',
@@ -746,11 +746,11 @@ const Tokenomics = () => {
                   position: 'absolute',
                   top: '20px',
                   right: '20px',
-                  fontSize: '3rem',
+                  fontSize: '2.4rem',
                   opacity: 0.8
                 }}>🔒</div>
                 <h4 style={{ 
-                  fontSize: '1.8rem', 
+                  fontSize: '1.4rem', 
                   fontWeight: '800', 
                   marginBottom: '1.5rem',
                   color: '#4ecdc4',
@@ -781,11 +781,11 @@ const Tokenomics = () => {
                   position: 'absolute',
                   top: '20px',
                   right: '20px',
-                  fontSize: '3rem',
+                  fontSize: '2.4rem',
                   opacity: 0.8
                 }}>💎</div>
                 <h4 style={{ 
-                  fontSize: '1.8rem', 
+                  fontSize: '1.4rem', 
                   fontWeight: '800', 
                   marginBottom: '1.5rem',
                   color: '#ff6b6b',
@@ -816,11 +816,11 @@ const Tokenomics = () => {
                   position: 'absolute',
                   top: '20px',
                   right: '20px',
-                  fontSize: '3rem',
+                  fontSize: '2.4rem',
                   opacity: 0.8
                 }}>🌊</div>
                 <h4 style={{ 
-                  fontSize: '1.8rem', 
+                  fontSize: '1.4rem', 
                   fontWeight: '800', 
                   marginBottom: '1.5rem',
                   color: '#00d4ff',
@@ -868,7 +868,7 @@ const Tokenomics = () => {
           
           <div style={{ position: 'relative', zIndex: 2 }}>
             <h3 style={{
-              fontSize: '2.5rem',
+              fontSize: '2rem',
               fontWeight: '900',
               marginBottom: '2rem',
               color: '#ffffff',
@@ -879,7 +879,7 @@ const Tokenomics = () => {
               <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '40px', width: 'auto', margin: '0 15px', filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.7))'}} />
             </h3>
             <p style={{
-              fontSize: '1.4rem',
+              fontSize: '1.1rem',
               color: '#ffffff',
               lineHeight: '1.8',
               maxWidth: '900px',

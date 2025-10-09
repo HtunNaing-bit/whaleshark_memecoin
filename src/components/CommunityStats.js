@@ -83,7 +83,7 @@ const CommunityStats = () => {
         >
           <motion.h2 
             style={{
-              fontSize: '5rem',
+              fontSize: '4rem',
               fontWeight: '900',
               marginBottom: '2rem',
               background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
@@ -110,7 +110,7 @@ const CommunityStats = () => {
           </motion.h2>
           <motion.p 
             style={{
-              fontSize: '1.8rem',
+              fontSize: '1.4rem',
               color: '#ffffff',
               maxWidth: '800px',
               margin: '0 auto',
@@ -282,7 +282,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '4.5rem',
+                  fontSize: '3.5rem',
                   fontWeight: '900',
                   marginBottom: '1.5rem',
                   color: '#ffffff',
@@ -305,7 +305,7 @@ const CommunityStats = () => {
                 {(animatedStats.sharks / 1000).toFixed(1)}k+
               </motion.h3>
               <p style={{
-                fontSize: '1.5rem',
+                fontSize: '1.2rem',
                 fontWeight: '800',
                 color: '#00ffff',
                 marginBottom: '1rem',
@@ -315,7 +315,7 @@ const CommunityStats = () => {
                 Community Members
               </p>
               <p style={{
-                fontSize: '1.1rem',
+                fontSize: '0.9rem',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.6',
@@ -422,7 +422,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '4.5rem',
+                  fontSize: '3.5rem',
                   fontWeight: '900',
                   marginBottom: '1.5rem',
                   color: '#ffffff',
@@ -445,7 +445,7 @@ const CommunityStats = () => {
                 ${animatedStats.treasure}M+
               </motion.h3>
               <p style={{
-                fontSize: '1.5rem',
+                fontSize: '1.2rem',
                 fontWeight: '800',
                 color: '#00ff99',
                 marginBottom: '1rem',
@@ -455,7 +455,7 @@ const CommunityStats = () => {
                 Market Cap
               </p>
               <p style={{
-                fontSize: '1.1rem',
+                fontSize: '0.9rem',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.6',
@@ -562,7 +562,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '4.5rem',
+                  fontSize: '3.5rem',
                   fontWeight: '900',
                   marginBottom: '1.5rem',
                   color: '#ffffff',
@@ -585,7 +585,7 @@ const CommunityStats = () => {
                 {animatedStats.growth}%
               </motion.h3>
               <p style={{
-                fontSize: '1.5rem',
+                fontSize: '1.2rem',
                 fontWeight: '800',
                 color: '#ff6600',
                 marginBottom: '1rem',
@@ -595,7 +595,7 @@ const CommunityStats = () => {
                 Growth Rate
               </p>
               <p style={{
-                fontSize: '1.1rem',
+                fontSize: '0.9rem',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.6',
@@ -702,7 +702,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '4.5rem',
+                  fontSize: '3.5rem',
                   fontWeight: '900',
                   marginBottom: '1.5rem',
                   color: '#ffffff',
@@ -725,7 +725,7 @@ const CommunityStats = () => {
                 ${animatedStats.waters.toFixed(1)}M
               </motion.h3>
               <p style={{
-                fontSize: '1.5rem',
+                fontSize: '1.2rem',
                 fontWeight: '800',
                 color: '#9900ff',
                 marginBottom: '1rem',
@@ -735,7 +735,7 @@ const CommunityStats = () => {
                 24 Hours Volume
               </p>
               <p style={{
-                fontSize: '1.1rem',
+                fontSize: '0.9rem',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.6',
@@ -852,7 +852,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '3rem',
+                  fontSize: '2.5rem',
                   fontWeight: '900',
                   marginBottom: '1.5rem',
                   color: '#ffffff',
@@ -875,7 +875,7 @@ const CommunityStats = () => {
                 $0.00042
               </motion.h3>
               <p style={{
-                fontSize: '1.5rem',
+                fontSize: '1.2rem',
                 fontWeight: '800',
                 color: '#ffd700',
                 marginBottom: '1rem',
@@ -885,7 +885,7 @@ const CommunityStats = () => {
                 Current Price
               </p>
               <p style={{
-                fontSize: '1.1rem',
+                fontSize: '0.9rem',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.6',
@@ -999,7 +999,7 @@ const CommunityStats = () => {
           <div style={{ position: 'relative', zIndex: 2 }}>
             <motion.h3 
               style={{
-                fontSize: '3.5rem',
+                fontSize: '2.8rem',
                 fontWeight: '900',
                 marginBottom: '3rem',
                 background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff)',
@@ -1026,7 +1026,7 @@ const CommunityStats = () => {
             </motion.h3>
             <motion.p 
               style={{
-                fontSize: '1.6rem',
+                fontSize: '1.2rem',
                 color: '#ffffff',
                 lineHeight: '1.8',
                 maxWidth: '1000px',

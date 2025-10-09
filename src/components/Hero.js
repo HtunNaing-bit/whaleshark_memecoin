@@ -109,9 +109,9 @@ const Hero = () => {
                 src="/whale-shark-logo.svg" 
                 alt="WhaleShark Logo" 
                 style={{
-                  height: '220px',
+                  height: '120px',
                   width: 'auto',
-                  filter: 'drop-shadow(0 0 50px rgba(0, 255, 255, 0.8)) brightness(1.2)'
+                  filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.8)) brightness(1.2)'
                 }}
               />
             </div>
@@ -121,16 +121,7 @@ const Hero = () => {
           <motion.h1 
             className="hero-3d-title"
             style={{
-              fontSize: 'clamp(2.2rem, 8vw, 6rem)',
-              fontWeight: '900',
-              marginBottom: '2rem',
-              background: 'linear-gradient(45deg, #00ffff, #0099ff, #00ccff, #66ccff)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              textShadow: '0 0 60px rgba(0, 255, 255, 0.8)',
-              transform: 'translateZ(50px)',
-              filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.6))'
+              fontSize: '3.5rem'
             }}
             animate={{ 
               scale: [1, 1.05, 1],
@@ -152,12 +143,7 @@ const Hero = () => {
           <motion.p 
             className="hero-3d-tagline"
             style={{
-              fontSize: 'clamp(1rem, 4vw, 2.5rem)',
-              fontWeight: '700',
-              marginBottom: '3rem',
-              color: '#ffffff',
-              textShadow: '0 0 30px rgba(255, 255, 255, 0.6)',
-              transform: 'translateZ(30px)'
+              fontSize: '1.4rem'
             }}
             animate={{ 
               y: [0, -5, 0],
@@ -179,13 +165,13 @@ const Hero = () => {
           style={{
             background: 'rgba(0, 50, 100, 0.2)',
             backdropFilter: 'blur(30px)',
-            borderRadius: '40px',
-            padding: '5rem',
+            borderRadius: '25px',
+            padding: '2.5rem',
             position: 'relative',
             overflow: 'hidden',
-            marginBottom: '4rem',
+            marginBottom: '2rem',
             border: '2px solid rgba(0, 255, 255, 0.3)',
-            boxShadow: '0 30px 60px rgba(0, 100, 200, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+            boxShadow: '0 20px 40px rgba(0, 100, 200, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
             transform: 'translateZ(20px)',
             perspective: 1000
           }}
@@ -265,14 +251,14 @@ const Hero = () => {
             >
               <motion.h2 
                 style={{
-                  fontSize: '3.5rem',
+                  fontSize: '2rem',
                   fontWeight: '900',
-                  marginBottom: '2.5rem',
+                  marginBottom: '1.5rem',
                   background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
-                  textShadow: '0 0 40px rgba(0, 255, 255, 0.6)',
+                  textShadow: '0 0 30px rgba(0, 255, 255, 0.6)',
                   transform: 'translateZ(40px)'
                 }}
                 animate={{ 
@@ -293,12 +279,12 @@ const Hero = () => {
               
               <motion.p 
                 style={{
-                  fontSize: '1.8rem',
+                  fontSize: '1rem',
                   fontWeight: '600',
                   color: '#ffffff',
-                  lineHeight: '1.8',
-                  marginBottom: '3rem',
-                  textShadow: '0 2px 15px rgba(0, 0, 0, 0.5)',
+                  lineHeight: '1.6',
+                  marginBottom: '2rem',
+                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
                   transform: 'translateZ(20px)'
                 }}
                 animate={{ 
@@ -318,21 +304,21 @@ const Hero = () => {
               {/* 3D Feature Cards */}
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '3rem',
-                marginTop: '4rem'
+                gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                gap: '2rem',
+                marginTop: '2rem'
               }}>
                 <motion.div
                   className="feature-3d-card"
                   style={{
                     background: 'rgba(0, 100, 200, 0.2)',
                     border: '2px solid rgba(0, 255, 255, 0.4)',
-                    borderRadius: '25px',
-                    padding: '3rem',
+                    borderRadius: '20px',
+                    padding: '2rem',
                     textAlign: 'center',
                     backdropFilter: 'blur(20px)',
                     transform: 'translateZ(30px)',
-                    boxShadow: '0 20px 40px rgba(0, 100, 200, 0.3)'
+                    boxShadow: '0 15px 30px rgba(0, 100, 200, 0.3)'
                   }}
                   whileHover={{ 
                     y: -15, 
@@ -343,7 +329,7 @@ const Hero = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <motion.div 
-                    style={{ fontSize: '4rem', marginBottom: '1.5rem' }}
+                    style={{ fontSize: '2.5rem', marginBottom: '1rem' }}
                     animate={{ 
                       rotate: [0, 10, -10, 0],
                       scale: [1, 1.1, 1]
@@ -356,8 +342,8 @@ const Hero = () => {
                   >
                     ⚡
                   </motion.div>
-                  <h4 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#00ffff', marginBottom: '1rem', textShadow: '0 0 20px rgba(0, 255, 255, 0.6)' }}>Lightning Speed</h4>
-                  <p style={{ fontSize: '1.1rem', color: '#ffffff', opacity: 0.9, lineHeight: '1.6' }}>Instant transactions with minimal fees and maximum efficiency</p>
+                  <h4 style={{ fontSize: '1rem', fontWeight: '800', color: '#00ffff', marginBottom: '0.8rem', textShadow: '0 0 15px rgba(0, 255, 255, 0.6)' }}>Lightning Speed</h4>
+                  <p style={{ fontSize: '0.8rem', color: '#ffffff', opacity: 0.9, lineHeight: '1.4' }}>Instant transactions with minimal fees and maximum efficiency</p>
                 </motion.div>
                 
                 <motion.div
@@ -365,12 +351,12 @@ const Hero = () => {
                   style={{
                     background: 'rgba(0, 150, 100, 0.2)',
                     border: '2px solid rgba(0, 255, 150, 0.4)',
-                    borderRadius: '25px',
-                    padding: '3rem',
+                    borderRadius: '20px',
+                    padding: '2rem',
                     textAlign: 'center',
                     backdropFilter: 'blur(20px)',
                     transform: 'translateZ(30px)',
-                    boxShadow: '0 20px 40px rgba(0, 150, 100, 0.3)'
+                    boxShadow: '0 15px 30px rgba(0, 150, 100, 0.3)'
                   }}
                   whileHover={{ 
                     y: -15, 
@@ -381,7 +367,7 @@ const Hero = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <motion.div 
-                    style={{ fontSize: '4rem', marginBottom: '1.5rem' }}
+                    style={{ fontSize: '2.5rem', marginBottom: '1rem' }}
                     animate={{ 
                       rotate: [0, -5, 5, 0],
                       scale: [1, 1.1, 1]
@@ -394,8 +380,8 @@ const Hero = () => {
                   >
                     🛡️
                   </motion.div>
-                  <h4 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#00ff99', marginBottom: '1rem', textShadow: '0 0 20px rgba(0, 255, 150, 0.6)' }}>Ocean Security</h4>
-                  <p style={{ fontSize: '1.1rem', color: '#ffffff', opacity: 0.9, lineHeight: '1.6' }}>Military-grade security protocols protecting your investments</p>
+                  <h4 style={{ fontSize: '1rem', fontWeight: '800', color: '#00ff99', marginBottom: '0.8rem', textShadow: '0 0 15px rgba(0, 255, 150, 0.6)' }}>Ocean Security</h4>
+                  <p style={{ fontSize: '0.8rem', color: '#ffffff', opacity: 0.9, lineHeight: '1.4' }}>Military-grade security protocols protecting your investments</p>
                 </motion.div>
                 
                 <motion.div
@@ -403,12 +389,12 @@ const Hero = () => {
                   style={{
                     background: 'rgba(100, 0, 200, 0.2)',
                     border: '2px solid rgba(150, 0, 255, 0.4)',
-                    borderRadius: '25px',
-                    padding: '3rem',
+                    borderRadius: '20px',
+                    padding: '2rem',
                     textAlign: 'center',
                     backdropFilter: 'blur(20px)',
                     transform: 'translateZ(30px)',
-                    boxShadow: '0 20px 40px rgba(100, 0, 200, 0.3)'
+                    boxShadow: '0 15px 30px rgba(100, 0, 200, 0.3)'
                   }}
                   whileHover={{ 
                     y: -15, 
@@ -419,7 +405,7 @@ const Hero = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <motion.div 
-                    style={{ fontSize: '4rem', marginBottom: '1.5rem' }}
+                    style={{ fontSize: '2.5rem', marginBottom: '1rem' }}
                     animate={{ 
                       rotate: [0, 15, -15, 0],
                       scale: [1, 1.1, 1]
@@ -432,8 +418,8 @@ const Hero = () => {
                   >
                     🌊
                   </motion.div>
-                  <h4 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#9900ff', marginBottom: '1rem', textShadow: '0 0 20px rgba(150, 0, 255, 0.6)' }}>Community Pod</h4>
-                  <p style={{ fontSize: '1.1rem', color: '#ffffff', opacity: 0.9, lineHeight: '1.6' }}>Built by the community, for the community, swimming together</p>
+                  <h4 style={{ fontSize: '1rem', fontWeight: '800', color: '#9900ff', marginBottom: '0.8rem', textShadow: '0 0 15px rgba(150, 0, 255, 0.6)' }}>Community Pod</h4>
+                  <p style={{ fontSize: '0.8rem', color: '#ffffff', opacity: 0.9, lineHeight: '1.4' }}>Built by the community, for the community, swimming together</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -445,7 +431,7 @@ const Hero = () => {
           className="hero-3d-buttons"
           style={{
             textAlign: 'center',
-            marginTop: '5rem',
+            marginTop: '3rem',
             transform: 'translateZ(40px)'
           }}
           initial={{ opacity: 0, y: 50 }}
@@ -455,7 +441,7 @@ const Hero = () => {
         >
           <div style={{
             display: 'flex',
-            gap: 'clamp(1rem, 4vw, 3rem)',
+            gap: 'clamp(1rem, 3vw, 2rem)',
             justifyContent: 'center',
             flexWrap: 'wrap',
             perspective: 1000
@@ -467,18 +453,18 @@ const Hero = () => {
               className="btn-3d-ocean"
               style={{
                 background: 'linear-gradient(135deg, #00ffff, #0099ff, #0066cc)',
-                border: '3px solid rgba(0, 255, 255, 0.6)',
-                borderRadius: '35px',
-                padding: 'clamp(1rem, 4vw, 2rem) clamp(2rem, 8vw, 4rem)',
-                fontSize: 'clamp(0.9rem, 3vw, 1.5rem)',
+                border: '2px solid rgba(0, 255, 255, 0.6)',
+                borderRadius: '25px',
+                padding: 'clamp(0.8rem, 3vw, 1.5rem) clamp(1.5rem, 6vw, 3rem)',
+                fontSize: 'clamp(0.7rem, 2vw, 1rem)',
                 fontWeight: '900',
                 color: '#ffffff',
                 cursor: 'pointer',
                 textDecoration: 'none',
                 display: 'inline-block',
-                boxShadow: '0 25px 50px rgba(0, 200, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                boxShadow: '0 15px 30px rgba(0, 200, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
                 transition: 'all 0.4s ease',
-                textShadow: '0 3px 15px rgba(0, 0, 0, 0.5)',
+                textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
                 transform: 'translateZ(30px)',
                 position: 'relative',
                 overflow: 'hidden'
@@ -526,18 +512,18 @@ const Hero = () => {
               className="btn-3d-ocean"
               style={{
                 background: 'linear-gradient(135deg, #ff6600, #ff3300, #cc0000)',
-                border: '3px solid rgba(255, 100, 0, 0.6)',
-                borderRadius: '35px',
-                padding: 'clamp(1rem, 4vw, 2rem) clamp(2rem, 8vw, 4rem)',
-                fontSize: 'clamp(0.9rem, 3vw, 1.5rem)',
+                border: '2px solid rgba(255, 100, 0, 0.6)',
+                borderRadius: '25px',
+                padding: 'clamp(0.8rem, 3vw, 1.5rem) clamp(1.5rem, 6vw, 3rem)',
+                fontSize: 'clamp(0.7rem, 2vw, 1rem)',
                 fontWeight: '900',
                 color: '#ffffff',
                 cursor: 'pointer',
                 textDecoration: 'none',
                 display: 'inline-block',
-                boxShadow: '0 25px 50px rgba(255, 100, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                boxShadow: '0 15px 30px rgba(255, 100, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
                 transition: 'all 0.4s ease',
-                textShadow: '0 3px 15px rgba(0, 0, 0, 0.5)',
+                textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
                 transform: 'translateZ(30px)',
                 position: 'relative',
                 overflow: 'hidden'
@@ -580,15 +566,15 @@ const Hero = () => {
             </motion.a>
           </div>
           
-          <motion.p 
+            <motion.p 
             style={{
-              marginTop: '4rem',
-              fontSize: '1.4rem',
+              marginTop: '2rem',
+              fontSize: '0.9rem',
               color: '#ffffff',
               fontStyle: 'italic',
               fontWeight: '700',
               opacity: 0.9,
-              textShadow: '0 2px 20px rgba(0, 255, 255, 0.4)',
+              textShadow: '0 2px 15px rgba(0, 255, 255, 0.4)',
               transform: 'translateZ(20px)'
             }}
             animate={{ 
@@ -601,9 +587,9 @@ const Hero = () => {
               ease: "easeInOut"
             }}
           >
-            <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '30px', width: 'auto', margin: '0 10px', filter: 'drop-shadow(0 0 10px rgba(0, 255, 255, 0.6))'}} />
+            <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '20px', width: 'auto', margin: '0 8px', filter: 'drop-shadow(0 0 8px rgba(0, 255, 255, 0.6))'}} />
             Join thousands of investors swimming in the depths of DeFi!
-            <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '30px', width: 'auto', margin: '0 10px', filter: 'drop-shadow(0 0 10px rgba(0, 255, 255, 0.6))'}} />
+            <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '20px', width: 'auto', margin: '0 8px', filter: 'drop-shadow(0 0 8px rgba(0, 255, 255, 0.6))'}} />
           </motion.p>
         </motion.div>
       </div>

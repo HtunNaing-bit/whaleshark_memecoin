@@ -173,7 +173,7 @@ const FinalSection = () => {
           <div style={{ position: 'relative', zIndex: 2 }}>
             <motion.h2 
               style={{
-                fontSize: '5rem',
+                fontSize: '4rem',
                 fontWeight: '900',
                 marginBottom: '3rem',
                 background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
@@ -201,7 +201,7 @@ const FinalSection = () => {
             
             <motion.p 
               style={{
-                fontSize: '2rem',
+                fontSize: '1.5rem',
                 color: '#ffffff',
                 lineHeight: '1.8',
                 maxWidth: '1000px',
@@ -249,8 +249,8 @@ const FinalSection = () => {
                   fontSize: '3rem',
                   opacity: 0.8
                 }}>🚀</div>
-                <h4 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#00d4ff', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Get Started Today</h4>
-                <p style={{ fontSize: '1.1rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
+                <h4 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#00d4ff', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Get Started Today</h4>
+                <p style={{ fontSize: '0.9rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
                   Join our community and start your DeFi journey with $WHALESHARK. 
                   Simple, secure, and profitable.
                 </p>
@@ -276,8 +276,8 @@ const FinalSection = () => {
                   fontSize: '3rem',
                   opacity: 0.8
                 }}>💎</div>
-                <h4 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#4ecdc4', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Long-term Value</h4>
-                <p style={{ fontSize: '1.1rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
+                <h4 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#4ecdc4', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Long-term Value</h4>
+                <p style={{ fontSize: '0.9rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
                   Our tokenomics are designed for sustainable growth and long-term value creation 
                   for all community members.
                 </p>
@@ -303,8 +303,8 @@ const FinalSection = () => {
                   fontSize: '3rem',
                   opacity: 0.8
                 }}>🌊</div>
-                <h4 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#ff6b6b', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Community First</h4>
-                <p style={{ fontSize: '1.1rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
+                <h4 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#ff6b6b', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Community First</h4>
+                <p style={{ fontSize: '0.9rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
                   Everything we do is for our community. Your success is our success, 
                   and together we build the future.
                 </p>
@@ -330,7 +330,7 @@ const FinalSection = () => {
                   border: '2px solid #00d4ff',
                   borderRadius: '25px',
                   padding: '1.8rem 3.5rem',
-                  fontSize: '1.4rem',
+                  fontSize: '1.1rem',
                   fontWeight: '800',
                   color: '#ffffff',
                   cursor: 'pointer',
@@ -362,7 +362,7 @@ const FinalSection = () => {
                   border: '2px solid #00d4ff',
                   borderRadius: '25px',
                   padding: '1.8rem 3.5rem',
-                  fontSize: '1.4rem',
+                  fontSize: '1.1rem',
                   fontWeight: '800',
                   color: '#ffffff',
                   cursor: 'pointer',
@@ -422,7 +422,7 @@ const FinalSection = () => {
           
           <div style={{ position: 'relative', zIndex: 2 }}>
             <h3 style={{
-              fontSize: '2.8rem',
+              fontSize: '2.2rem',
               fontWeight: '900',
               marginBottom: '2.5rem',
               color: '#ffffff',
@@ -451,8 +451,8 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎯</div>
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '800', color: '#4ecdc4', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Proven Track Record</h4>
-                <p style={{ fontSize: '1rem', color: '#ffffff', opacity: 0.9 }}>Consistent growth and community satisfaction</p>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#4ecdc4', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Proven Track Record</h4>
+                <p style={{ fontSize: '0.9rem', color: '#ffffff', opacity: 0.9 }}>Consistent growth and community satisfaction</p>
               </motion.div>
 
               <motion.div
@@ -467,8 +467,8 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🔒</div>
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '800', color: '#ff6b6b', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Secure & Audited</h4>
-                <p style={{ fontSize: '1rem', color: '#ffffff', opacity: 0.9 }}>Smart contracts audited by top security firms</p>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#ff6b6b', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Secure & Audited</h4>
+                <p style={{ fontSize: '0.9rem', color: '#ffffff', opacity: 0.9 }}>Smart contracts audited by top security firms</p>
               </motion.div>
 
               <motion.div
@@ -483,8 +483,8 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🌍</div>
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '800', color: '#00d4ff', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Global Community</h4>
-                <p style={{ fontSize: '1rem', color: '#ffffff', opacity: 0.9 }}>Join investors from around the world</p>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#00d4ff', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Global Community</h4>
+                <p style={{ fontSize: '0.9rem', color: '#ffffff', opacity: 0.9 }}>Join investors from around the world</p>
               </motion.div>
 
               <motion.div
@@ -499,8 +499,8 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💡</div>
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '800', color: '#ffc107', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Innovation</h4>
-                <p style={{ fontSize: '1rem', color: '#ffffff', opacity: 0.9 }}>Cutting-edge DeFi technology and features</p>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#ffc107', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Innovation</h4>
+                <p style={{ fontSize: '0.9rem', color: '#ffffff', opacity: 0.9 }}>Cutting-edge DeFi technology and features</p>
               </motion.div>
             </div>
           </div>
@@ -524,7 +524,7 @@ const FinalSection = () => {
           viewport={{ once: true }}
         >
           <p style={{
-            fontSize: '1.5rem',
+            fontSize: '1.2rem',
             color: '#ffffff',
             lineHeight: '1.8',
             maxWidth: '700px',

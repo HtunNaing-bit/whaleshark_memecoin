@@ -149,6 +149,39 @@
   transform-style: preserve-3d;
 }
 
+/* 3D Title Styling */
+.hero-3d-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #00ffff, #0099ff, #00ccff, #66ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 60px rgba(0, 255, 255, 0.8);
+  transform: translateZ(50px);
+  filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.6));
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: unset;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 3D Tagline Styling */
+.hero-3d-tagline {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+  transform: translateZ(30px);
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
 .whale-shark-3d-model {
   position: relative;
   margin-bottom: 3rem;
