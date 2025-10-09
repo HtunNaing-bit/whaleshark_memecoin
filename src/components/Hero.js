@@ -6,12 +6,23 @@ const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    let animationFrame;
     const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+      animationFrame = requestAnimationFrame(() => {
+        setMousePosition({ x: e.clientX, y: e.clientY });
+      });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
   }, []);
 
   return (
@@ -78,6 +89,48 @@ const Hero = () => {
 
       {/* Interactive 3D Hero Content */}
       <div className="hero-3d-container">
+        {/* Top Logo */}
+        <div className="hero-top-logo">
+          <motion.div
+            className="logo-container"
+            style={{
+              display: 'inline-block',
+              position: 'relative'
+            }}
+          >
+            <motion.img 
+              src="/whale-shark-logo.svg" 
+              alt="WhaleShark Logo" 
+              style={{
+                height: 'clamp(160px, 24vw, 240px)',
+                width: 'auto',
+                display: 'block',
+                margin: '0 auto 2rem auto',
+                filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.6))'
+              }}
+              animate={{ 
+                rotate: 360,
+                y: [0, -10, 0],
+                scale: [1, 1.05, 1],
+                filter: [
+                  'drop-shadow(0 0 30px rgba(0, 255, 255, 0.6))',
+                  'drop-shadow(0 0 50px rgba(0, 255, 255, 0.9))',
+                  'drop-shadow(0 0 30px rgba(0, 255, 255, 0.6))'
+                ]
+              }}
+              transition={{ 
+                rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                filter: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+              }}
+            />
+            <div className="logo-pulse-ring"></div>
+            <div className="logo-pulse-ring ring-2"></div>
+            <div className="logo-pulse-ring ring-3"></div>
+          </motion.div>
+        </div>
+
         {/* Main 3D Title with Parallax */}
         <motion.div 
           className="hero-3d-title-section"
@@ -89,44 +142,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0, rotateX: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <motion.div
-            className="whale-shark-3d-model"
-            style={{
-              transform: `translate3d(${mousePosition.x * 0.01}px, ${mousePosition.y * 0.01}px, 0)`,
-            }}
-            animate={{ 
-              rotateY: [0, 360],
-              scale: [1, 1.1, 1]
-            }}
-            transition={{ 
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          >
-            <div className="whale-shark-3d">
-              <img 
-                src="/whale-shark-logo.svg" 
-                alt="WhaleShark Logo" 
-                style={{
-                  height: '120px',
-                  width: 'auto',
-                  filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.8)) brightness(1.2)'
-                }}
-              />
-            </div>
-            <div className="whale-shark-glow"></div>
-          </motion.div>
 
           <motion.h1 
             className="hero-3d-title"
-            style={{
-              fontSize: 'clamp(2rem, 8vw, 5rem)',
-              lineHeight: '1.1',
-              wordWrap: 'break-word',
-              overflowWrap: 'break-word',
-              hyphens: 'auto'
-            }}
             animate={{ 
               scale: [1, 1.05, 1],
               textShadow: [
@@ -146,14 +164,6 @@ const Hero = () => {
           
           <motion.p 
             className="hero-3d-tagline"
-            style={{
-              fontSize: 'clamp(0.8rem, 2.5vw, 1.2rem)',
-              lineHeight: '1.4',
-              wordWrap: 'break-word',
-              overflowWrap: 'break-word',
-              hyphens: 'auto',
-              textAlign: 'center'
-            }}
             animate={{ 
               y: [0, -5, 0],
               opacity: [0.8, 1, 0.8]
@@ -259,9 +269,10 @@ const Hero = () => {
               viewport={{ once: true }}
             >
               <motion.h2 
+                className="section-title"
                 style={{
-                  fontSize: 'clamp(1rem, 3vw, 1.5rem)',
-                  fontWeight: '900',
+                  fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+                  fontWeight: '800',
                   marginBottom: '1.5rem',
                   background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
                   WebkitBackgroundClip: 'text',
@@ -270,6 +281,7 @@ const Hero = () => {
                   textShadow: '0 0 30px rgba(0, 255, 255, 0.6)',
                   transform: 'translateZ(40px)',
                   lineHeight: '1.3',
+                  letterSpacing: '0.025em',
                   wordWrap: 'break-word',
                   overflowWrap: 'break-word',
                   hyphens: 'auto',
@@ -292,14 +304,16 @@ const Hero = () => {
               </motion.h2>
               
               <motion.p 
+                className="hero-description"
                 style={{
-                  fontSize: 'clamp(0.6rem, 2vw, 0.9rem)',
-                  fontWeight: '600',
+                  fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+                  fontWeight: '500',
                   color: '#ffffff',
-                  lineHeight: '1.6',
+                  lineHeight: '1.7',
                   marginBottom: '1rem',
                   textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
                   transform: 'translateZ(20px)',
+                  letterSpacing: '0.01em',
                   wordWrap: 'break-word',
                   overflowWrap: 'break-word',
                   hyphens: 'auto',
@@ -362,8 +376,8 @@ const Hero = () => {
                   >
                     ⚡
                   </motion.div>
-                  <h4 style={{ fontSize: 'clamp(0.7rem, 2vw, 0.9rem)', fontWeight: '800', color: '#00ffff', marginBottom: '0.8rem', textShadow: '0 0 15px rgba(0, 255, 255, 0.6)', wordWrap: 'break-word', overflowWrap: 'break-word' }}>Lightning Speed</h4>
-                  <p style={{ fontSize: 'clamp(0.5rem, 1.5vw, 0.7rem)', color: '#ffffff', opacity: 0.9, lineHeight: '1.4', wordWrap: 'break-word', overflowWrap: 'break-word' }}>Instant transactions with minimal fees and maximum efficiency</p>
+                  <h4 className="card-title cyan">Lightning Speed</h4>
+                  <p className="card-text">Instant transactions with minimal fees and maximum efficiency</p>
                 </motion.div>
                 
                 <motion.div
@@ -400,8 +414,8 @@ const Hero = () => {
                   >
                     🛡️
                   </motion.div>
-                  <h4 style={{ fontSize: 'clamp(0.7rem, 2vw, 0.9rem)', fontWeight: '800', color: '#00ff99', marginBottom: '0.8rem', textShadow: '0 0 15px rgba(0, 255, 150, 0.6)', wordWrap: 'break-word', overflowWrap: 'break-word' }}>Ocean Security</h4>
-                  <p style={{ fontSize: 'clamp(0.5rem, 1.5vw, 0.7rem)', color: '#ffffff', opacity: 0.9, lineHeight: '1.4', wordWrap: 'break-word', overflowWrap: 'break-word' }}>Military-grade security protocols protecting your investments</p>
+                  <h4 className="card-title green">Ocean Security</h4>
+                  <p className="card-text">Military-grade security protocols protecting your investments</p>
                 </motion.div>
                 
                 <motion.div
@@ -438,8 +452,8 @@ const Hero = () => {
                   >
                     🌊
                   </motion.div>
-                  <h4 style={{ fontSize: 'clamp(0.7rem, 2vw, 0.9rem)', fontWeight: '800', color: '#9900ff', marginBottom: '0.8rem', textShadow: '0 0 15px rgba(150, 0, 255, 0.6)', wordWrap: 'break-word', overflowWrap: 'break-word' }}>Community Pod</h4>
-                  <p style={{ fontSize: 'clamp(0.5rem, 1.5vw, 0.7rem)', color: '#ffffff', opacity: 0.9, lineHeight: '1.4', wordWrap: 'break-word', overflowWrap: 'break-word' }}>Built by the community, for the community, swimming together</p>
+                  <h4 className="card-title purple">Community Pod</h4>
+                  <p className="card-text">Built by the community, for the community, swimming together</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -478,8 +492,8 @@ const Hero = () => {
                 border: '2px solid rgba(0, 255, 255, 0.6)',
                 borderRadius: '25px',
                 padding: 'clamp(0.8rem, 3vw, 1.2rem) clamp(1.5rem, 5vw, 2.5rem)',
-                fontSize: 'clamp(0.7rem, 2vw, 0.9rem)',
-                fontWeight: '900',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                fontWeight: '700',
                 color: '#ffffff',
                 cursor: 'pointer',
                 textDecoration: 'none',
@@ -491,7 +505,9 @@ const Hero = () => {
                 position: 'relative',
                 overflow: 'hidden',
                 minWidth: 'clamp(120px, 20vw, 200px)',
-                textAlign: 'center'
+                textAlign: 'center',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase'
               }}
               whileHover={{ 
                 y: -15, 
@@ -539,8 +555,8 @@ const Hero = () => {
                 border: '2px solid rgba(255, 100, 0, 0.6)',
                 borderRadius: '25px',
                 padding: 'clamp(0.8rem, 3vw, 1.2rem) clamp(1.5rem, 5vw, 2.5rem)',
-                fontSize: 'clamp(0.7rem, 2vw, 0.9rem)',
-                fontWeight: '900',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                fontWeight: '700',
                 color: '#ffffff',
                 cursor: 'pointer',
                 textDecoration: 'none',
@@ -552,7 +568,9 @@ const Hero = () => {
                 position: 'relative',
                 overflow: 'hidden',
                 minWidth: 'clamp(120px, 20vw, 200px)',
-                textAlign: 'center'
+                textAlign: 'center',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase'
               }}
               whileHover={{ 
                 y: -15, 
@@ -593,19 +611,21 @@ const Hero = () => {
           </div>
           
             <motion.p 
+            className="hero-description"
             style={{
               marginTop: '2rem',
-              fontSize: 'clamp(0.5rem, 1.5vw, 0.8rem)',
+              fontSize: 'clamp(0.8rem, 1.5vw, 1rem)',
               color: '#ffffff',
               fontStyle: 'italic',
-              fontWeight: '700',
+              fontWeight: '500',
               opacity: 0.9,
               textShadow: '0 2px 15px rgba(0, 255, 255, 0.4)',
               transform: 'translateZ(20px)',
               textAlign: 'center',
               wordWrap: 'break-word',
               overflowWrap: 'break-word',
-              lineHeight: '1.4'
+              lineHeight: '1.6',
+              letterSpacing: '0.01em'
             }}
             animate={{ 
               opacity: [0.7, 1, 0.7],
@@ -617,9 +637,7 @@ const Hero = () => {
               ease: "easeInOut"
             }}
           >
-            <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: 'clamp(20px, 4vw, 30px)', width: 'auto', margin: '0 4px', filter: 'drop-shadow(0 0 8px rgba(0, 255, 255, 0.6))'}} />
             Join thousands of investors swimming in the depths of DeFi!
-            <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: 'clamp(20px, 4vw, 30px)', width: 'auto', margin: '0 4px', filter: 'drop-shadow(0 0 8px rgba(0, 255, 255, 0.6))'}} />
           </motion.p>
         </motion.div>
       </div>

@@ -1,22 +1,22 @@
 {
-  "name": "whaleshark-memecoin",
+  "name": "whaleshark-coin",
   "version": "1.0.0",
-  "description": "WhaleShark Meme Coin - The Ocean's Most Powerful Meme",
+  "description": "Revolutionary DeFi token with 3D underwater-themed website",
   "private": true,
+  "homepage": "https://whaleshark-coin.com",
   "dependencies": {
-    "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "framer-motion": "^10.16.4",
+    "react-scripts": "5.0.1"
   },
-  "homepage": "https://whaleshark.fun",
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && cp public/CNAME build/CNAME && gh-pages -d build -b gh-pages",
-    "clean": "rm -rf build node_modules/.cache"
+    "deploy": "gh-pages -d build",
+    "analyze": "npm run build && npx bundle-analyzer build/static/js/*.js"
   },
   "eslintConfig": {
     "extends": [
@@ -36,7 +36,29 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
+  "keywords": [
+    "cryptocurrency",
+    "defi",
+    "blockchain",
+    "react",
+    "3d",
+    "animations",
+    "responsive",
+    "whaleshark",
+    "token",
+    "crypto"
+  ],
+  "author": "WhaleShark Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/whaleshark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/whaleshark/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
 }

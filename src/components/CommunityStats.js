@@ -19,8 +19,8 @@ const CommunityStats = () => {
         waters: 2.4
       };
 
-      const duration = 2000;
-      const steps = 60;
+      const duration = 1500; // Reduced duration
+      const steps = 30; // Reduced steps for better performance
       const stepDuration = duration / steps;
 
       let currentStep = 0;
@@ -41,7 +41,7 @@ const CommunityStats = () => {
       }, stepDuration);
     };
 
-    const timer = setTimeout(animateNumbers, 500);
+    const timer = setTimeout(animateNumbers, 300); // Reduced delay
     return () => clearTimeout(timer);
   }, []);
 
@@ -82,9 +82,10 @@ const CommunityStats = () => {
           viewport={{ once: true }}
         >
           <motion.h2 
+            className="section-title"
             style={{
-              fontSize: 'clamp(1rem, 3vw, 1.5rem)',
-              fontWeight: '900',
+              fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+              fontWeight: '800',
               marginBottom: '1rem',
               background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
               WebkitBackgroundClip: 'text',
@@ -93,6 +94,7 @@ const CommunityStats = () => {
               textShadow: '0 0 60px rgba(0, 255, 255, 0.8)',
               transform: 'translateZ(60px)',
               lineHeight: '1.3',
+              letterSpacing: '0.025em',
               wordWrap: 'break-word',
               overflowWrap: 'break-word',
               hyphens: 'auto',
@@ -114,16 +116,18 @@ const CommunityStats = () => {
             🌊 SHARK POD ANALYTICS 🌊
           </motion.h2>
           <motion.p 
+            className="section-description"
             style={{
-              fontSize: 'clamp(0.7rem, 2vw, 1rem)',
+              fontSize: 'clamp(1rem, 2vw, 1.2rem)',
               color: '#ffffff',
               maxWidth: '800px',
               margin: '0 auto',
-              lineHeight: '1.8',
-              fontWeight: '600',
+              lineHeight: '1.7',
+              fontWeight: '500',
               opacity: 0.9,
               textShadow: '0 2px 20px rgba(0, 255, 255, 0.4)',
               transform: 'translateZ(30px)',
+              letterSpacing: '0.01em',
               wordWrap: 'break-word',
               overflowWrap: 'break-word',
               hyphens: 'auto',
@@ -197,7 +201,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
+                  fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)',
                   fontWeight: '900',
                   marginBottom: '1rem',
                   color: '#ffffff',
@@ -223,7 +227,7 @@ const CommunityStats = () => {
                 {(animatedStats.sharks / 1000).toFixed(1)}k+
               </motion.h3>
               <p style={{
-                fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
+                fontSize: 'clamp(0.8rem, 1.8vw, 1rem)',
                 fontWeight: '800',
                 color: '#00ffff',
                 marginBottom: '0.8rem',
@@ -236,7 +240,7 @@ const CommunityStats = () => {
                 Community Members
               </p>
               <p style={{
-                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)',
+                fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.4',
@@ -346,7 +350,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
+                  fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)',
                   fontWeight: '900',
                   marginBottom: '1rem',
                   color: '#ffffff',
@@ -372,7 +376,7 @@ const CommunityStats = () => {
                 ${animatedStats.treasure}M+
               </motion.h3>
               <p style={{
-                fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
+                fontSize: 'clamp(0.8rem, 1.8vw, 1rem)',
                 fontWeight: '800',
                 color: '#00ff99',
                 marginBottom: '1rem',
@@ -385,7 +389,7 @@ const CommunityStats = () => {
                 Market Cap
               </p>
               <p style={{
-                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)',
+                fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.4',
@@ -495,7 +499,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
+                  fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)',
                   fontWeight: '900',
                   marginBottom: '1rem',
                   color: '#ffffff',
@@ -521,7 +525,7 @@ const CommunityStats = () => {
                 {animatedStats.growth}%
               </motion.h3>
               <p style={{
-                fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
+                fontSize: 'clamp(0.8rem, 1.8vw, 1rem)',
                 fontWeight: '800',
                 color: '#ff6600',
                 marginBottom: '1rem',
@@ -534,7 +538,7 @@ const CommunityStats = () => {
                 Growth Rate
               </p>
               <p style={{
-                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)',
+                fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.4',
@@ -644,7 +648,7 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
+                  fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)',
                   fontWeight: '900',
                   marginBottom: '1rem',
                   color: '#ffffff',
@@ -670,7 +674,7 @@ const CommunityStats = () => {
                 ${animatedStats.waters.toFixed(1)}M
               </motion.h3>
               <p style={{
-                fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
+                fontSize: 'clamp(0.8rem, 1.8vw, 1rem)',
                 fontWeight: '800',
                 color: '#9900ff',
                 marginBottom: '1rem',
@@ -683,7 +687,7 @@ const CommunityStats = () => {
                 24 Hours Volume
               </p>
               <p style={{
-                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)',
+                fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)',
                 color: '#ffffff',
                 opacity: 0.9,
                 lineHeight: '1.4',

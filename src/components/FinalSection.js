@@ -172,9 +172,10 @@ const FinalSection = () => {
           
           <div style={{ position: 'relative', zIndex: 2 }}>
             <motion.h2 
+            className="section-title"
             style={{
-              fontSize: 'clamp(1rem, 3vw, 1.5rem)',
-              fontWeight: '900',
+              fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+              fontWeight: '800',
               marginBottom: '3rem',
               background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
               WebkitBackgroundClip: 'text',
@@ -183,6 +184,7 @@ const FinalSection = () => {
               textShadow: '0 0 60px rgba(0, 255, 255, 0.8)',
               transform: 'translateZ(70px)',
               lineHeight: '1.3',
+              letterSpacing: '0.025em',
               wordWrap: 'break-word',
               overflowWrap: 'break-word',
               hyphens: 'auto',
@@ -190,23 +192,23 @@ const FinalSection = () => {
             }}
               animate={{ 
                 textShadow: [
+                  '0 0 40px rgba(0, 255, 255, 0.6)',
                   '0 0 60px rgba(0, 255, 255, 0.8)',
-                  '0 0 80px rgba(0, 255, 255, 1)',
-                  '0 0 60px rgba(0, 255, 255, 0.8)'
+                  '0 0 40px rgba(0, 255, 255, 0.6)'
                 ]
               }}
               transition={{ 
-                duration: 4,
+                duration: 6,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             >
-              🌊 READY TO DIVE INTO THE POD? 🌊
+              READY TO DIVE INTO THE POD?
             </motion.h2>
             
             <motion.p 
               style={{
-                fontSize: 'clamp(0.7rem, 2vw, 1rem)',
+                fontSize: 'clamp(0.8rem, 2vw, 1.1rem)',
                 color: '#ffffff',
                 lineHeight: '1.8',
                 maxWidth: '1000px',
@@ -253,8 +255,8 @@ const FinalSection = () => {
                 whileHover={{ y: -12, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <h4 style={{ fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '800', color: '#00d4ff', marginBottom: '1rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)', wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>🚀 Get Started Today</h4>
-                <p style={{ fontSize: 'clamp(0.6rem, 1.5vw, 0.8rem)', color: '#ffffff', lineHeight: '1.4', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
+                <h4 className="card-title blue">🚀 Get Started Today</h4>
+                <p className="card-text">
                   Join our community and start your DeFi journey with $WHALESHARK. 
                   Simple, secure, and profitable.
                 </p>
@@ -273,8 +275,8 @@ const FinalSection = () => {
                 whileHover={{ y: -12, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <h4 style={{ fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '800', color: '#4ecdc4', marginBottom: '1rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)', wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>📈 Long-term Value</h4>
-                <p style={{ fontSize: 'clamp(0.6rem, 1.5vw, 0.8rem)', color: '#ffffff', lineHeight: '1.4', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
+                <h4 className="card-title teal">📈 Long-term Value</h4>
+                <p className="card-text">
                   Our tokenomics are designed for sustainable growth and long-term value creation 
                   for all community members.
                 </p>
@@ -294,7 +296,7 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <h4 style={{ fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '800', color: '#ff6b6b', marginBottom: '1rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)', wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>🤝 Community First</h4>
-                <p style={{ fontSize: 'clamp(0.6rem, 1.5vw, 0.8rem)', color: '#ffffff', lineHeight: '1.4', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
+                <p style={{ fontSize: 'clamp(0.7rem, 1.5vw, 0.9rem)', color: '#ffffff', lineHeight: '1.4', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
                   Everything we do is for our community. Your success is our success, 
                   and together we build the future.
                 </p>

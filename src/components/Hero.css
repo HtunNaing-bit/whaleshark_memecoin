@@ -12,6 +12,105 @@
   perspective: 1000px;
 }
 
+/* Optimized Typography Styles */
+.hero-3d-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #00ffff, #0099ff, #66ccff, #00ccff, #33aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+.hero-3d-tagline {
+  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.section-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.card-title {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  letter-spacing: 0.025em;
+}
+
+.card-text {
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  color: #ffffff;
+  opacity: 0.9;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-weight: 400;
+}
+
+/* Card Color Variants */
+.card-title.cyan {
+  color: #00ffff;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+.card-title.green {
+  color: #00ff99;
+  text-shadow: 0 0 15px rgba(0, 255, 150, 0.6);
+}
+
+.card-title.purple {
+  color: #9900ff;
+  text-shadow: 0 0 15px rgba(150, 0, 255, 0.6);
+}
+
 /* 3D Ocean Depth Layers */
 .ocean-depth-layers {
   position: absolute;
@@ -27,6 +126,8 @@
   width: 100%;
   height: 100%;
   opacity: 0.3;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .layer-1 {
@@ -50,23 +151,23 @@
 }
 
 @keyframes oceanDepth1 {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-20px) scale(1.1); }
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -20px, 0) scale(1.1); }
 }
 
 @keyframes oceanDepth2 {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-30px) scale(1.05); }
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -30px, 0) scale(1.05); }
 }
 
 @keyframes oceanDepth3 {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-25px) scale(1.08); }
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -25px, 0) scale(1.08); }
 }
 
 @keyframes oceanDepth4 {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-35px) scale(1.02); }
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -35px, 0) scale(1.02); }
 }
 
 /* Floating Sea Creatures */
@@ -84,6 +185,8 @@
   position: absolute;
   font-size: 2rem;
   opacity: 0.7;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .jellyfish-1 {
@@ -142,6 +245,55 @@
   transform-style: preserve-3d;
 }
 
+/* Top Logo Styles */
+.hero-top-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(0, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: pulseRing 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+.logo-pulse-ring.ring-2 {
+  animation-delay: 1s;
+  border-color: rgba(0, 200, 255, 0.3);
+}
+
+.logo-pulse-ring.ring-3 {
+  animation-delay: 2s;
+  border-color: rgba(0, 150, 255, 0.2);
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+}
+
 /* 3D Title Section */
 .hero-3d-title-section {
   text-align: center;
@@ -170,7 +322,7 @@
 
 /* 3D Tagline Styling */
 .hero-3d-tagline {
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
   font-weight: 700;
   margin-bottom: 3rem;
   color: #ffffff;
@@ -182,41 +334,7 @@
   hyphens: auto;
 }
 
-.whale-shark-3d-model {
-  position: relative;
-  margin-bottom: 3rem;
-  transform-style: preserve-3d;
-}
 
-.whale-shark-3d {
-  font-size: 8rem;
-  filter: drop-shadow(0 0 50px rgba(0, 255, 255, 0.8));
-  animation: sharkSwim 6s ease-in-out infinite;
-}
-
-.whale-shark-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: glowPulse 4s ease-in-out infinite;
-}
-
-@keyframes sharkSwim {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  25% { transform: translateY(-15px) rotate(2deg); }
-  50% { transform: translateY(-10px) rotate(0deg); }
-  75% { transform: translateY(-20px) rotate(-2deg); }
-}
-
-@keyframes glowPulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
-  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.6; }
-}
 
 /* 3D Card Styles */
 .hero-3d-card {
@@ -621,7 +739,7 @@
   }
   
   .hero-3d-tagline {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.2rem);
   }
 }
 
@@ -635,7 +753,7 @@
   }
   
   .hero-3d-tagline {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.2rem);
   }
   
   .hero-3d-card {
@@ -657,7 +775,7 @@
   }
   
   .hero-3d-tagline {
-    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.2rem);
   }
   
   .hero-3d-card {
@@ -679,12 +797,16 @@
     padding: 50px 5px;
   }
   
+  .hero-top-logo img {
+    height: clamp(140px, 20vw, 180px) !important;
+  }
+  
   .hero-3d-title {
     font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   }
   
   .hero-3d-tagline {
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.2rem);
   }
   
   .hero-3d-card {
@@ -706,9 +828,6 @@
     padding: 0 1rem;
   }
   
-  .whale-shark-3d-model img {
-    height: clamp(80px, 15vw, 120px) !important;
-  }
 }
 
 @media (max-width: 576px) {
@@ -716,12 +835,16 @@
     padding: 40px 5px;
   }
   
+  .hero-top-logo img {
+    height: clamp(120px, 16vw, 160px) !important;
+  }
+  
   .hero-3d-title {
     font-size: clamp(1.5rem, 3vw, 2rem);
   }
   
   .hero-3d-tagline {
-    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.2rem);
   }
   
   .hero-3d-card {
@@ -737,18 +860,19 @@
     font-size: clamp(0.6rem, 1vw, 0.8rem);
   }
   
-  .whale-shark-3d-model img {
-    height: clamp(60px, 12vw, 100px) !important;
-  }
 }
 
 @media (max-width: 480px) {
+  .hero-top-logo img {
+    height: clamp(100px, 14vw, 140px) !important;
+  }
+  
   .hero-3d-title {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   }
   
   .hero-3d-tagline {
-    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.2rem);
   }
   
   .hero-3d-card {
@@ -766,8 +890,34 @@
     max-width: clamp(150px, 25vw, 200px);
   }
   
-  .whale-shark-3d-model img {
-    height: clamp(50px, 10vw, 80px) !important;
+}
+
+/* Extra small devices (320px and below) */
+@media (max-width: 320px) {
+  .hero-3d-ocean {
+    padding: 30px 5px;
+  }
+  
+  .hero-top-logo img {
+    height: clamp(80px, 12vw, 120px) !important;
+  }
+  
+  .hero-3d-title {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+  
+  .hero-3d-tagline {
+    font-size: clamp(0.8rem, 1.8vw, 1.2rem);
+  }
+  
+  .feature-3d-card {
+    padding: 0.8rem;
+    margin: 0.3rem;
+  }
+  
+  .btn-3d-ocean {
+    padding: 0.6rem 1rem;
+    font-size: clamp(0.6rem, 1.2vw, 0.8rem);
   }
 }
 
@@ -783,16 +933,13 @@
   }
   
   .hero-3d-tagline {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   
   .hero-3d-card {
     padding: 2rem;
   }
   
-  .whale-shark-3d-model img {
-    height: 80px !important;
-  }
 }
 
 /* Touch device optimizations */

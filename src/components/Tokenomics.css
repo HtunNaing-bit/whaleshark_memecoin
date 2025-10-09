@@ -12,6 +12,72 @@
   perspective: 1000px;
 }
 
+/* Optimized Typography Styles */
+.section-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.section-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.card-subtitle {
+  font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.card-title {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.card-text {
+  font-size: clamp(0.5rem, 1vw, 0.7rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  opacity: 0.9;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
 /* Underwater Blockchain Visualization */
 .blockchain-ocean {
   position: absolute;
@@ -393,6 +459,33 @@
   
   .holographic-logo-3d img {
     height: 60px !important;
+  }
+}
+
+/* Extra small devices (320px and below) */
+@media (max-width: 320px) {
+  .tokenomics-3d {
+    padding: 20px 5px;
+  }
+  
+  .token-info-3d {
+    padding: 1rem;
+  }
+  
+  .token-metric-3d {
+    padding: 1rem;
+  }
+  
+  .security-features-3d {
+    padding: 1rem;
+  }
+  
+  .token-distribution-3d {
+    padding: 1rem;
+  }
+  
+  .holographic-logo-3d img {
+    height: 40px !important;
   }
 }
 
