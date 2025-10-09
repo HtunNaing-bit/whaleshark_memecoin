@@ -138,7 +138,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Contact
 
 - **Telegram**: [@whaleshark_coin](https://t.me/whaleshark_coin)
-- **Website**: [whaleshark-coin.com](https://whaleshark-coin.com)
+- **Website**: [whaleshark.fun](https://whaleshark.fun)
 
 ## 🌟 Acknowledgments
 
