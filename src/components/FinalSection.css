@@ -1,415 +1,427 @@
-/* Final Section - Tokenomics Design */
-.final-section {
-  padding: 100px 20px;
+/* Revolutionary 3D Final Section */
+.final-section-3d {
+  padding: 120px 20px;
   background: 
-    linear-gradient(135deg, #0f0f0f 0%, #0a1a0a 50%, #0f0f0f 100%),
-    radial-gradient(circle at 1px 1px, rgba(0, 255, 255, 0.1) 1px, transparent 0);
-  background-size: 100% 100%, 15px 15px;
+    linear-gradient(180deg, #001122 0%, #002244 25%, #003366 50%, #001a33 75%, #000811 100%);
   color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  perspective: 1000px;
+}
+
+/* Underwater CTA Environment */
+.cta-ocean-environment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.swimming-sharks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.swimming-shark {
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+}
+
+.swimming-shark.active {
+  animation: sharkGlow 2s ease-in-out infinite;
+}
+
+@keyframes sharkGlow {
+  0%, 100% { 
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.4));
+    transform: translateZ(30px) scale(1);
+  }
+  50% { 
+    filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.8));
+    transform: translateZ(40px) scale(1.2);
+  }
+}
+
+.treasure-chests {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.treasure-chest {
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
+}
+
+.treasure-chest:hover {
+  transform: translateZ(30px) scale(1.2);
+}
+
+/* 3D Container */
+.container-3d {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  transform-style: preserve-3d;
+}
+
+/* Main CTA 3D */
+.main-cta-3d {
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+}
+
+.main-cta-3d:hover {
+  transform: translateZ(80px) rotateY(5deg);
+}
+
+/* Underwater CTA Effects */
+.underwater-cta-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cta-bubble {
+  transform-style: preserve-3d;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 3D Action Buttons */
+.cta-buttons-3d {
+  display: flex;
+  gap: 3rem;
+  justifyContent: 'center';
+  flexWrap: 'wrap';
+  transform: 'translateZ(60px)';
+  transformStyle: 'preserve-3d';
+}
+
+.btn-3d-cta {
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
 }
 
-/* Rotating background animation for CTA card */
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.btn-3d-cta:hover {
+  transform: translateZ(50px) rotateY(10deg);
 }
 
-/* Subtle grid background - Same as Tokenomics */
-.final-section::before {
+.btn-3d-cta::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  z-index: 1;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
 }
 
-.final-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
+.btn-3d-cta:hover::before {
+  transform: translateX(100%);
 }
 
-/* Header */
-.final-header {
-  text-align: center;
-  margin-bottom: 4rem;
+/* 3D Community Benefits */
+.community-benefits-3d {
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
 }
 
-.final-header h2 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin: 0 0 1.5rem 0;
-  color: #ffffff;
-  letter-spacing: -0.02em;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+.community-benefits-3d:hover {
+  transform: translateZ(60px) rotateY(-3deg);
 }
 
-.final-header p {
-  font-size: 1.25rem;
-  color: #94a3b8;
-  margin: 0;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-  font-weight: 400;
-}
-
-/* Features Grid */
-.final-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-.final-feature-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s ease;
+/* 3D Benefit Cards */
+.benefit-3d-card {
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
   position: relative;
 }
 
-.final-feature-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.12);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+.benefit-3d-card:hover {
+  transform: translateZ(40px) rotateY(8deg);
 }
 
-.feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: block;
+/* 3D Final Message */
+.final-message-3d {
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
 }
 
-.final-feature-card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.75rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.final-feature-card p {
-  font-size: 0.875rem;
-  color: #94a3b8;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-  font-family: 'Inter', sans-serif;
-}
-
-/* CTA Section */
-.final-cta {
-  text-align: center;
-}
-
-.cta-content {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.cta-content h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.cta-content p {
-  font-size: 1.125rem;
-  color: #94a3b8;
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
-  font-family: 'Inter', sans-serif;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-button {
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 25px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  backdrop-filter: blur(10px);
-  transform: translateZ(0);
-  will-change: transform, box-shadow;
-}
-
-.cta-button.primary {
-  background: #000000 !important;
-  color: #00ffff !important;
-  box-shadow: 
-    0 0 20px rgba(255, 0, 255, 0.6),
-    0 0 40px rgba(255, 0, 255, 0.4),
-    0 0 60px rgba(255, 0, 255, 0.2) !important;
-  border: 2px solid rgba(255, 0, 255, 0.5) !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-  position: relative !important;
-  z-index: 10 !important;
-  display: inline-block !important;
-  text-decoration: none !important;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
-}
-
-.cta-button.primary:hover {
-  box-shadow: 
-    0 0 30px rgba(255, 0, 255, 0.8),
-    0 0 50px rgba(255, 0, 255, 0.6),
-    0 0 70px rgba(255, 0, 255, 0.4) !important;
-  transform: translateY(-2px) !important;
-  border-color: rgba(255, 0, 255, 0.8) !important;
-}
-
-.cta-button.secondary {
-  background: #000000 !important;
-  color: #00ffff !important;
-  box-shadow: 
-    0 0 20px rgba(255, 0, 255, 0.6),
-    0 0 40px rgba(255, 0, 255, 0.4),
-    0 0 60px rgba(255, 0, 255, 0.2) !important;
-  border: 2px solid rgba(255, 0, 255, 0.5) !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-  position: relative !important;
-  z-index: 10 !important;
-  display: inline-block !important;
-  text-decoration: none !important;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
-}
-
-.cta-button.secondary:hover {
-  box-shadow: 
-    0 0 30px rgba(255, 0, 255, 0.8),
-    0 0 50px rgba(255, 0, 255, 0.6),
-    0 0 70px rgba(255, 0, 255, 0.4) !important;
-  transform: translateY(-2px) !important;
-  border-color: rgba(255, 0, 255, 0.8) !important;
+.final-message-3d:hover {
+  transform: translateZ(50px) rotateY(2deg);
 }
 
 /* Enhanced Responsive Design */
 @media (max-width: 1200px) {
-  .final-section {
-    padding: 100px 30px;
+  .final-section-3d {
+    padding: 100px 20px;
   }
   
-  .final-header h2 {
-    font-size: 3rem;
-  }
-  
-  .final-features {
-    gap: 2rem;
-  }
-  
-  .cta-content {
-    max-width: 900px;
+  .main-cta-3d {
+    padding: 5rem;
   }
 }
 
 @media (max-width: 992px) {
-  .final-section {
-    padding: 90px 25px;
+  .final-section-3d {
+    padding: 80px 20px;
   }
   
-  .final-header h2 {
-    font-size: 2.8rem;
+  .main-cta-3d {
+    padding: 4rem;
   }
   
-  .final-header p {
-    font-size: 1.2rem;
-  }
-  
-  .final-features {
-    gap: 1.8rem;
-  }
-  
-  .cta-content {
-    max-width: 800px;
-    padding: 2.5rem;
-  }
-  
-  .cta-content h3 {
-    font-size: 2rem;
+  .cta-buttons-3d {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .final-section {
-    padding: 80px 20px;
+  .final-section-3d {
+    padding: 60px 20px;
   }
   
-  .final-header h2 {
-    font-size: 2.5rem;
+  .main-cta-3d {
+    padding: 3rem;
   }
   
-  .final-header p {
-    font-size: 1.125rem;
+  .swimming-shark {
+    font-size: 2rem;
   }
   
-  .final-features {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .cta-content {
-    max-width: 600px;
-    padding: 2rem;
-  }
-  
-  .cta-content h3 {
-    font-size: 1.75rem;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .cta-button {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    min-width: 200px;
+  .treasure-chest {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
-  .final-section {
+  .final-section-3d {
+    padding: 40px 15px;
+  }
+  
+  .main-cta-3d {
+    padding: 2.5rem;
+  }
+  
+  .swimming-shark {
+    font-size: 1.5rem;
+  }
+  
+  .treasure-chest {
+    font-size: 1.2rem;
+  }
+}
+
+/* Enhanced Responsive Design for All Devices */
+@media (max-width: 1400px) {
+  .final-section-3d {
+    padding: 100px 20px;
+  }
+  
+  .final-cta-3d {
+    padding: 4.5rem;
+  }
+  
+  .community-benefits-3d {
+    padding: 4.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .final-section-3d {
+    padding: 80px 15px;
+  }
+  
+  .final-cta-3d {
+    padding: 4rem;
+  }
+  
+  .community-benefits-3d {
+    padding: 4rem;
+  }
+  
+  .benefit-card-3d {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .final-section-3d {
     padding: 70px 15px;
   }
   
-  .final-header h2 {
-    font-size: 2.2rem;
+  .final-cta-3d {
+    padding: 3rem;
   }
   
-  .final-header p {
-    font-size: 1rem;
+  .community-benefits-3d {
+    padding: 3rem;
   }
   
-  .cta-content {
-    max-width: 500px;
+  .cta-buttons-3d {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .benefit-card-3d {
+    padding: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .final-section-3d {
+    padding: 60px 10px;
+  }
+  
+  .final-cta-3d {
+    padding: 2.5rem;
+  }
+  
+  .community-benefits-3d {
+    padding: 2.5rem;
+  }
+  
+  .benefit-card-3d {
+    padding: 2rem;
+  }
+  
+  .final-cta-3d h2 {
+    font-size: 3.5rem;
+  }
+  
+  .final-cta-3d p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .final-section-3d {
+    padding: 50px 5px;
+  }
+  
+  .final-cta-3d {
+    padding: 2rem;
+  }
+  
+  .community-benefits-3d {
+    padding: 2rem;
+  }
+  
+  .benefit-card-3d {
     padding: 1.8rem;
   }
   
-  .cta-content h3 {
-    font-size: 1.6rem;
+  .final-cta-3d h2 {
+    font-size: 2.8rem;
   }
   
-  .cta-content p {
-    font-size: 1rem;
-    line-height: 1.6;
+  .final-cta-3d p {
+    font-size: 1.2rem;
   }
   
-  .cta-button {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
-    min-width: 180px;
+  .community-benefits-3d h3 {
+    font-size: 2.2rem;
+  }
+  
+  .community-benefits-3d p {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .final-section {
-    padding: 60px 15px;
+  .final-section-3d {
+    padding: 40px 5px;
   }
   
-  .final-header h2 {
-    font-size: 2rem;
-  }
-  
-  .final-header p {
-    font-size: 0.95rem;
-  }
-  
-  .final-feature-card,
-  .cta-content {
+  .final-cta-3d {
     padding: 1.5rem;
   }
   
-  .cta-content {
-    max-width: 400px;
+  .community-benefits-3d {
+    padding: 1.5rem;
   }
   
-  .cta-content h3 {
-    font-size: 1.5rem;
+  .benefit-card-3d {
+    padding: 1.5rem;
   }
   
-  .cta-content p {
-    font-size: 0.95rem;
+  .final-cta-3d h2 {
+    font-size: 2.2rem;
   }
   
-  .cta-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
-    min-width: 160px;
-  }
-}
-
-@media (max-width: 360px) {
-  .final-section {
-    padding: 50px 10px;
+  .final-cta-3d p {
+    font-size: 1rem;
   }
   
-  .final-header h2 {
+  .community-benefits-3d h3 {
     font-size: 1.8rem;
   }
   
-  .final-header p {
-    font-size: 0.9rem;
+  .community-benefits-3d p {
+    font-size: 1rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .final-section-3d {
+    padding: 30px 20px;
   }
   
-  .final-feature-card,
-  .cta-content {
-    padding: 1.25rem;
+  .final-cta-3d {
+    padding: 2rem;
   }
   
-  .cta-content {
-    max-width: 350px;
+  .community-benefits-3d {
+    padding: 2rem;
   }
   
-  .cta-content h3 {
-    font-size: 1.3rem;
+  .benefit-card-3d {
+    padding: 2rem;
   }
   
-  .cta-content p {
-    font-size: 0.9rem;
+  .final-cta-3d h2 {
+    font-size: 3rem;
   }
   
-  .cta-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    min-width: 140px;
+  .final-cta-3d p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn-3d-cta:hover {
+    transform: none;
+  }
+  
+  .benefit-card-3d:hover {
+    transform: none;
+  }
+  
+  .final-cta-3d:hover {
+    transform: none;
+  }
+  
+  .community-benefits-3d:hover {
+    transform: none;
   }
 }
