@@ -1,6 +1,6 @@
 /* Revolutionary 3D Community Stats Section */
 .community-stats-3d {
-  padding: 120px 20px;
+  padding: 40px 15px;
   background: 
     linear-gradient(180deg, #001122 0%, #002244 25%, #003366 50%, #001a33 75%, #000811 100%);
   color: #ffffff;
@@ -85,9 +85,9 @@
 /* 3D Stats Grid */
 .stats-3d-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
   transform-style: preserve-3d;
 }
 
@@ -219,12 +219,6 @@
 }
 
 /* Enhanced Responsive Design */
-@media (max-width: 1200px) {
-  .stats-3d-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-  }
-}
 
 @media (max-width: 992px) {
   .community-stats-3d {
@@ -277,22 +271,22 @@
 /* Enhanced Responsive Design for All Devices */
 @media (max-width: 1400px) {
   .community-stats-3d {
-    padding: 100px 20px;
+    padding: 60px 15px;
   }
   
   .stats-3d-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
   }
 }
 
 @media (max-width: 1200px) {
   .community-stats-3d {
-    padding: 80px 15px;
+    padding: 50px 12px;
   }
   
   .stats-3d-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2.5rem;
   }
   
@@ -307,7 +301,7 @@
   }
   
   .stats-3d-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
   }
   
@@ -330,7 +324,7 @@
   }
   
   .stats-3d-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.8rem;
   }
   

@@ -1,6 +1,6 @@
 /* Revolutionary 3D Tokenomics Section */
 .tokenomics-3d {
-  padding: 120px 20px;
+  padding: 40px 15px;
   background: 
     linear-gradient(180deg, #001122 0%, #002244 25%, #003366 50%, #001a33 75%, #000811 100%);
   color: #ffffff;
@@ -212,15 +212,6 @@
 }
 
 /* Enhanced Responsive Design */
-@media (max-width: 1200px) {
-  .tokenomics-3d {
-    padding: 100px 20px;
-  }
-  
-  .token-info-3d {
-    padding: 4rem;
-  }
-}
 
 @media (max-width: 992px) {
   .tokenomics-3d {
@@ -275,15 +266,15 @@
 /* Enhanced Responsive Design for All Devices */
 @media (max-width: 1400px) {
   .tokenomics-3d {
-    padding: 100px 20px;
+    padding: 60px 15px;
   }
   
   .token-info-3d {
-    padding: 4.5rem;
+    padding: 3rem;
   }
   
   .token-metric-3d {
-    padding: 3rem;
+    padding: 2rem;
   }
 }
 

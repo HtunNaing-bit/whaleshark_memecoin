@@ -97,13 +97,13 @@ const FinalSection = () => {
             background: 'rgba(0, 50, 100, 0.2)',
             backdropFilter: 'blur(30px)',
             borderRadius: '50px',
-            padding: '6rem',
+            padding: '2rem',
             textAlign: 'center',
             position: 'relative',
             overflow: 'hidden',
             border: '3px solid rgba(0, 255, 255, 0.4)',
             boxShadow: '0 50px 100px rgba(0, 100, 200, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.1)',
-            marginBottom: '5rem',
+            marginBottom: '2.5rem',
             transform: 'translateZ(60px)',
             transformStyle: 'preserve-3d'
           }}
@@ -172,17 +172,22 @@ const FinalSection = () => {
           
           <div style={{ position: 'relative', zIndex: 2 }}>
             <motion.h2 
-              style={{
-                fontSize: '4rem',
-                fontWeight: '900',
-                marginBottom: '3rem',
-                background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 60px rgba(0, 255, 255, 0.8)',
-                transform: 'translateZ(70px)'
-              }}
+            style={{
+              fontSize: 'clamp(1rem, 3vw, 1.5rem)',
+              fontWeight: '900',
+              marginBottom: '3rem',
+              background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              textShadow: '0 0 60px rgba(0, 255, 255, 0.8)',
+              transform: 'translateZ(70px)',
+              lineHeight: '1.3',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
+              hyphens: 'auto',
+              textAlign: 'center'
+            }}
               animate={{ 
                 textShadow: [
                   '0 0 60px rgba(0, 255, 255, 0.8)',
@@ -201,14 +206,18 @@ const FinalSection = () => {
             
             <motion.p 
               style={{
-                fontSize: '1.5rem',
+                fontSize: 'clamp(0.7rem, 2vw, 1rem)',
                 color: '#ffffff',
                 lineHeight: '1.8',
                 maxWidth: '1000px',
                 margin: '0 auto 5rem auto',
                 textShadow: '0 2px 20px rgba(0, 0, 0, 0.5)',
                 opacity: 0.9,
-                transform: 'translateZ(50px)'
+                transform: 'translateZ(50px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                hyphens: 'auto',
+                textAlign: 'center'
               }}
               animate={{ 
                 opacity: [0.8, 1, 0.8]
@@ -225,16 +234,18 @@ const FinalSection = () => {
 
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-              gap: '2.5rem',
-              marginBottom: '4rem'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+              gap: 'clamp(0.8rem, 2vw, 1.5rem)',
+              marginBottom: '2.5rem',
+              width: '100%',
+              maxWidth: '100%'
             }}>
               <motion.div
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '20px',
-                  padding: '2.5rem',
+                  padding: '1.2rem',
                   textAlign: 'center',
                   backdropFilter: 'blur(10px)',
                   position: 'relative'
@@ -242,15 +253,8 @@ const FinalSection = () => {
                 whileHover={{ y: -12, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div style={{
-                  position: 'absolute',
-                  top: '20px',
-                  right: '20px',
-                  fontSize: '3rem',
-                  opacity: 0.8
-                }}>🚀</div>
-                <h4 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#00d4ff', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Get Started Today</h4>
-                <p style={{ fontSize: '0.9rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
+                <h4 style={{ fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '800', color: '#00d4ff', marginBottom: '1rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)', wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>🚀 Get Started Today</h4>
+                <p style={{ fontSize: 'clamp(0.6rem, 1.5vw, 0.8rem)', color: '#ffffff', lineHeight: '1.4', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
                   Join our community and start your DeFi journey with $WHALESHARK. 
                   Simple, secure, and profitable.
                 </p>
@@ -261,7 +265,7 @@ const FinalSection = () => {
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '20px',
-                  padding: '2.5rem',
+                  padding: '1.2rem',
                   textAlign: 'center',
                   backdropFilter: 'blur(10px)',
                   position: 'relative'
@@ -269,15 +273,8 @@ const FinalSection = () => {
                 whileHover={{ y: -12, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div style={{
-                  position: 'absolute',
-                  top: '20px',
-                  right: '20px',
-                  fontSize: '3rem',
-                  opacity: 0.8
-                }}>💎</div>
-                <h4 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#4ecdc4', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Long-term Value</h4>
-                <p style={{ fontSize: '0.9rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
+                <h4 style={{ fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '800', color: '#4ecdc4', marginBottom: '1rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)', wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>📈 Long-term Value</h4>
+                <p style={{ fontSize: 'clamp(0.6rem, 1.5vw, 0.8rem)', color: '#ffffff', lineHeight: '1.4', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
                   Our tokenomics are designed for sustainable growth and long-term value creation 
                   for all community members.
                 </p>
@@ -288,7 +285,7 @@ const FinalSection = () => {
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '20px',
-                  padding: '2.5rem',
+                  padding: '1.2rem',
                   textAlign: 'center',
                   backdropFilter: 'blur(10px)',
                   position: 'relative'
@@ -296,15 +293,8 @@ const FinalSection = () => {
                 whileHover={{ y: -12, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div style={{
-                  position: 'absolute',
-                  top: '20px',
-                  right: '20px',
-                  fontSize: '3rem',
-                  opacity: 0.8
-                }}>🌊</div>
-                <h4 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#ff6b6b', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Community First</h4>
-                <p style={{ fontSize: '0.9rem', color: '#ffffff', lineHeight: '1.6', opacity: 0.9 }}>
+                <h4 style={{ fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '800', color: '#ff6b6b', marginBottom: '1rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)', wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>🤝 Community First</h4>
+                <p style={{ fontSize: 'clamp(0.6rem, 1.5vw, 0.8rem)', color: '#ffffff', lineHeight: '1.4', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
                   Everything we do is for our community. Your success is our success, 
                   and together we build the future.
                 </p>
@@ -314,12 +304,14 @@ const FinalSection = () => {
             {/* Action Buttons */}
             <div style={{
               display: 'flex',
-              gap: '2rem',
+              gap: 'clamp(0.8rem, 2vw, 1.5rem)',
               justifyContent: 'center',
               flexWrap: 'wrap',
               position: 'relative',
               zIndex: 20,
-              pointerEvents: 'auto'
+              pointerEvents: 'auto',
+              width: '100%',
+              maxWidth: '100%'
             }}>
               <motion.a
                 href="https://x.com/whaleshark_coin?s=21"
@@ -329,8 +321,8 @@ const FinalSection = () => {
                   background: 'linear-gradient(135deg, #00d4ff, #0099cc)',
                   border: '2px solid #00d4ff',
                   borderRadius: '25px',
-                  padding: '1.8rem 3.5rem',
-                  fontSize: '1.1rem',
+                  padding: 'clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem)',
+                  fontSize: 'clamp(0.7rem, 1.8vw, 1rem)',
                   fontWeight: '800',
                   color: '#ffffff',
                   cursor: 'pointer',
@@ -341,7 +333,12 @@ const FinalSection = () => {
                   textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
                   position: 'relative',
                   zIndex: 10,
-                  pointerEvents: 'auto'
+                  pointerEvents: 'auto',
+                  minWidth: 'clamp(120px, 20vw, 180px)',
+                  maxWidth: '100%',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 whileHover={{ 
                   y: -8, 
@@ -361,8 +358,8 @@ const FinalSection = () => {
                   background: 'linear-gradient(135deg, #00d4ff, #0099cc)',
                   border: '2px solid #00d4ff',
                   borderRadius: '25px',
-                  padding: '1.8rem 3.5rem',
-                  fontSize: '1.1rem',
+                  padding: 'clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem)',
+                  fontSize: 'clamp(0.7rem, 1.8vw, 1rem)',
                   fontWeight: '800',
                   color: '#ffffff',
                   cursor: 'pointer',
@@ -373,7 +370,12 @@ const FinalSection = () => {
                   textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
                   position: 'relative',
                   zIndex: 30,
-                  pointerEvents: 'auto'
+                  pointerEvents: 'auto',
+                  minWidth: 'clamp(120px, 20vw, 180px)',
+                  maxWidth: '100%',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 whileHover={{ 
                   y: -8, 
@@ -397,12 +399,14 @@ const FinalSection = () => {
             background: 'rgba(78, 205, 196, 0.1)',
             backdropFilter: 'blur(20px)',
             borderRadius: '24px',
-            padding: '4rem',
+            padding: 'clamp(1.5rem, 4vw, 2.5rem)',
             position: 'relative',
             overflow: 'hidden',
             border: '1px solid rgba(78, 205, 196, 0.3)',
             boxShadow: '0 25px 50px rgba(78, 205, 196, 0.2)',
-            textAlign: 'center'
+            textAlign: 'center',
+            width: '100%',
+            maxWidth: '100%'
           }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -422,28 +426,26 @@ const FinalSection = () => {
           
           <div style={{ position: 'relative', zIndex: 2 }}>
             <h3 style={{
-              fontSize: '2.2rem',
+              fontSize: '1.2rem',
               fontWeight: '900',
               marginBottom: '2.5rem',
               color: '#ffffff',
               textShadow: '0 0 20px rgba(255, 255, 255, 0.5)'
             }}>
-              <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '50px', width: 'auto', margin: '0 15px', filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.8))'}} />
               Why Join the $WHALESHARK Pod?
-              <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '50px', width: 'auto', margin: '0 15px', filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.8))'}} />
             </h3>
             
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '2rem',
-              marginTop: '3rem'
+              gap: '0.8rem',
+              marginTop: '2rem'
             }}>
               <motion.div
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   borderRadius: '16px',
-                  padding: '2rem',
+                  padding: '1.5rem',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)'
                 }}
@@ -451,15 +453,15 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎯</div>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#4ecdc4', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Proven Track Record</h4>
-                <p style={{ fontSize: '0.9rem', color: '#ffffff', opacity: 0.9 }}>Consistent growth and community satisfaction</p>
+                <h4 style={{ fontSize: '0.9rem', fontWeight: '800', color: '#4ecdc4', marginBottom: '0.5rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)' }}>Proven Track Record</h4>
+                <p style={{ fontSize: '0.7rem', color: '#ffffff', opacity: 0.9 }}>Consistent growth and community satisfaction</p>
               </motion.div>
 
               <motion.div
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   borderRadius: '16px',
-                  padding: '2rem',
+                  padding: '1.5rem',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)'
                 }}
@@ -467,15 +469,15 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🔒</div>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#ff6b6b', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Secure & Audited</h4>
-                <p style={{ fontSize: '0.9rem', color: '#ffffff', opacity: 0.9 }}>Smart contracts audited by top security firms</p>
+                <h4 style={{ fontSize: '0.9rem', fontWeight: '800', color: '#ff6b6b', marginBottom: '0.5rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)' }}>Secure & Audited</h4>
+                <p style={{ fontSize: '0.7rem', color: '#ffffff', opacity: 0.9 }}>Smart contracts audited by top security firms</p>
               </motion.div>
 
               <motion.div
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   borderRadius: '16px',
-                  padding: '2rem',
+                  padding: '1.5rem',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)'
                 }}
@@ -483,15 +485,15 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🌍</div>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#00d4ff', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Global Community</h4>
-                <p style={{ fontSize: '0.9rem', color: '#ffffff', opacity: 0.9 }}>Join investors from around the world</p>
+                <h4 style={{ fontSize: '0.9rem', fontWeight: '800', color: '#00d4ff', marginBottom: '0.5rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)' }}>Global Community</h4>
+                <p style={{ fontSize: '0.7rem', color: '#ffffff', opacity: 0.9 }}>Join investors from around the world</p>
               </motion.div>
 
               <motion.div
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   borderRadius: '16px',
-                  padding: '2rem',
+                  padding: '1.5rem',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)'
                 }}
@@ -499,8 +501,8 @@ const FinalSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💡</div>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#ffc107', marginBottom: '0.5rem', textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}>Innovation</h4>
-                <p style={{ fontSize: '0.9rem', color: '#ffffff', opacity: 0.9 }}>Cutting-edge DeFi technology and features</p>
+                <h4 style={{ fontSize: '0.9rem', fontWeight: '800', color: '#ffc107', marginBottom: '0.5rem', textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)' }}>Innovation</h4>
+                <p style={{ fontSize: '0.7rem', color: '#ffffff', opacity: 0.9 }}>Cutting-edge DeFi technology and features</p>
               </motion.div>
             </div>
           </div>
@@ -510,13 +512,15 @@ const FinalSection = () => {
         <motion.div
           style={{
             textAlign: 'center',
-            marginTop: '4rem',
-            padding: '3rem',
+            marginTop: '2.5rem',
+            padding: 'clamp(1.5rem, 4vw, 2.5rem)',
             background: 'rgba(255, 255, 255, 0.05)',
             backdropFilter: 'blur(20px)',
             borderRadius: '24px',
             border: '1px solid rgba(255, 255, 255, 0.1)',
-            boxShadow: '0 25px 50px rgba(0, 0, 0, 0.3)'
+            boxShadow: '0 25px 50px rgba(0, 0, 0, 0.3)',
+            width: '100%',
+            maxWidth: '100%'
           }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -524,7 +528,7 @@ const FinalSection = () => {
           viewport={{ once: true }}
         >
           <p style={{
-            fontSize: '1.2rem',
+            fontSize: 'clamp(0.7rem, 2vw, 1rem)',
             color: '#ffffff',
             lineHeight: '1.8',
             maxWidth: '700px',
@@ -532,7 +536,11 @@ const FinalSection = () => {
             fontStyle: 'italic',
             fontWeight: '600',
             textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
-            opacity: 0.9
+            opacity: 0.9,
+            wordWrap: 'break-word',
+            overflowWrap: 'break-word',
+            hyphens: 'auto',
+            textAlign: 'center'
           }}>
             "The ocean is vast, but together we are the most powerful force in the crypto seas. 
             Join the $WHALESHARK pod and be part of something extraordinary."

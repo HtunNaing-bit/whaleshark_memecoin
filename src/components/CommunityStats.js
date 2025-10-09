@@ -73,7 +73,7 @@ const CommunityStats = () => {
           className="stats-3d-header"
           style={{
             textAlign: 'center',
-            marginBottom: '6rem',
+            marginBottom: '1.5rem',
             transform: 'translateZ(50px)'
           }}
           initial={{ opacity: 0, y: 50, rotateX: -20 }}
@@ -83,15 +83,20 @@ const CommunityStats = () => {
         >
           <motion.h2 
             style={{
-              fontSize: '4rem',
+              fontSize: 'clamp(1rem, 3vw, 1.5rem)',
               fontWeight: '900',
-              marginBottom: '2rem',
+              marginBottom: '1rem',
               background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               textShadow: '0 0 60px rgba(0, 255, 255, 0.8)',
-              transform: 'translateZ(60px)'
+              transform: 'translateZ(60px)',
+              lineHeight: '1.3',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
+              hyphens: 'auto',
+              textAlign: 'center'
             }}
             animate={{ 
               textShadow: [
@@ -110,7 +115,7 @@ const CommunityStats = () => {
           </motion.h2>
           <motion.p 
             style={{
-              fontSize: '1.4rem',
+              fontSize: 'clamp(0.7rem, 2vw, 1rem)',
               color: '#ffffff',
               maxWidth: '800px',
               margin: '0 auto',
@@ -118,7 +123,11 @@ const CommunityStats = () => {
               fontWeight: '600',
               opacity: 0.9,
               textShadow: '0 2px 20px rgba(0, 255, 255, 0.4)',
-              transform: 'translateZ(30px)'
+              transform: 'translateZ(30px)',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
+              hyphens: 'auto',
+              textAlign: 'center'
             }}
             animate={{ 
               opacity: [0.8, 1, 0.8]
@@ -138,17 +147,15 @@ const CommunityStats = () => {
           <motion.div
             className="stat-3d-card"
             style={{
-              background: 'linear-gradient(135deg, rgba(0, 50, 100, 0.3) 0%, rgba(0, 100, 150, 0.2) 50%, rgba(0, 150, 200, 0.3) 100%)',
-              backdropFilter: 'blur(40px)',
+              background: 'rgba(100, 0, 200, 0.2)',
+              border: '2px solid rgba(150, 0, 255, 0.4)',
               borderRadius: '20px',
-              padding: '3rem',
+              padding: '1.2rem',
               textAlign: 'center',
-              position: 'relative',
-              overflow: 'hidden',
-              border: '1px solid rgba(0, 255, 255, 0.2)',
-              boxShadow: '0 20px 40px rgba(0, 100, 200, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+              backdropFilter: 'blur(20px)',
               transform: 'translateZ(30px)',
-              transformStyle: 'preserve-3d'
+              boxShadow: '0 15px 30px rgba(100, 0, 200, 0.3)',
+              minHeight: '280px'
             }}
             initial={{ opacity: 0, y: 50, rotateX: -30 }}
             whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
@@ -156,109 +163,17 @@ const CommunityStats = () => {
             viewport={{ once: true }}
             whileHover={{ 
               y: -15, 
-              scale: 1.03,
-              rotateY: 5,
-              boxShadow: '0 30px 60px rgba(0, 100, 200, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+              scale: 1.05,
+              rotateY: 10,
+              boxShadow: '0 30px 60px rgba(100, 0, 200, 0.5)'
             }}
           >
-            {/* Modern Data Visualization */}
-            <div className="data-visualization" style={{
-              position: 'absolute',
-              top: '20px',
-              right: '20px',
-              width: '120px',
-              height: '80px',
-              display: 'flex',
-              alignItems: 'end',
-              gap: '8px',
-              transform: 'translateZ(20px)'
-            }}>
-              <motion.div 
-                className="data-bar"
-                style={{
-                  width: '20px',
-                  height: '60px',
-                  background: 'linear-gradient(to top, #00ffff, #0099ff)',
-                  borderRadius: '4px',
-                  boxShadow: '0 0 20px rgba(0, 255, 255, 0.4)'
-                }}
-                animate={{ 
-                  height: ['20px', '60px', '20px'],
-                  opacity: [0.6, 1, 0.6]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              <motion.div 
-                className="data-bar"
-                style={{
-                  width: '20px',
-                  height: '45px',
-                  background: 'linear-gradient(to top, #00ccff, #0066cc)',
-                  borderRadius: '4px',
-                  boxShadow: '0 0 20px rgba(0, 200, 255, 0.4)'
-                }}
-                animate={{ 
-                  height: ['15px', '45px', '15px'],
-                  opacity: [0.6, 1, 0.6]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.5
-                }}
-              />
-              <motion.div 
-                className="data-bar"
-                style={{
-                  width: '20px',
-                  height: '70px',
-                  background: 'linear-gradient(to top, #0099ff, #0033cc)',
-                  borderRadius: '4px',
-                  boxShadow: '0 0 20px rgba(0, 150, 255, 0.4)'
-                }}
-                animate={{ 
-                  height: ['25px', '70px', '25px'],
-                  opacity: [0.6, 1, 0.6]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-              />
-              <motion.div 
-                className="data-bar"
-                style={{
-                  width: '20px',
-                  height: '35px',
-                  background: 'linear-gradient(to top, #66ccff, #0099ff)',
-                  borderRadius: '4px',
-                  boxShadow: '0 0 20px rgba(100, 200, 255, 0.4)'
-                }}
-                animate={{ 
-                  height: ['10px', '35px', '10px'],
-                  opacity: [0.6, 1, 0.6]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1.5
-                }}
-              />
-            </div>
             
             <div style={{ position: 'relative', zIndex: 2 }}>
               <motion.div
                 style={{
                   fontSize: '5rem',
-                  marginBottom: '2rem',
+                  marginBottom: '1rem',
                   color: '#00ffff',
                   filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.8))'
                 }}
@@ -274,26 +189,29 @@ const CommunityStats = () => {
                 }}
               >
                 <div style={{
-                  fontSize: '4rem',
-                  filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.8))'
+                  fontSize: '1.8rem',
+                  filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.8))'
                 }}>
                   👥
                 </div>
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '3.5rem',
+                  fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
                   fontWeight: '900',
-                  marginBottom: '1.5rem',
+                  marginBottom: '1rem',
                   color: '#ffffff',
-                  textShadow: '0 0 30px rgba(255, 255, 255, 0.8)',
-                  transform: 'translateZ(30px)'
+                  textShadow: '0 0 20px rgba(255, 255, 255, 0.8)',
+                  transform: 'translateZ(20px)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 animate={{ 
                   textShadow: [
-                    '0 0 30px rgba(255, 255, 255, 0.8)',
+                    '0 0 20px rgba(255, 255, 255, 0.8)',
                     '0 0 50px rgba(0, 255, 255, 1)',
-                    '0 0 30px rgba(255, 255, 255, 0.8)'
+                    '0 0 20px rgba(255, 255, 255, 0.8)'
                   ]
                 }}
                 transition={{ 
@@ -305,21 +223,27 @@ const CommunityStats = () => {
                 {(animatedStats.sharks / 1000).toFixed(1)}k+
               </motion.h3>
               <p style={{
-                fontSize: '1.2rem',
+                fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
                 fontWeight: '800',
                 color: '#00ffff',
-                marginBottom: '1rem',
-                textShadow: '0 2px 15px rgba(0, 0, 0, 0.5)',
-                transform: 'translateZ(20px)'
+                marginBottom: '0.8rem',
+                textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+                transform: 'translateZ(15px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Community Members
               </p>
               <p style={{
-                fontSize: '0.9rem',
+                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)',
                 color: '#ffffff',
                 opacity: 0.9,
-                lineHeight: '1.6',
-                transform: 'translateZ(15px)'
+                lineHeight: '1.4',
+                transform: 'translateZ(10px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Swimming with fierce determination in our pod
               </p>
@@ -332,7 +256,7 @@ const CommunityStats = () => {
               background: 'linear-gradient(135deg, rgba(0, 100, 50, 0.3) 0%, rgba(0, 150, 75, 0.2) 50%, rgba(0, 200, 100, 0.3) 100%)',
               backdropFilter: 'blur(40px)',
               borderRadius: '20px',
-              padding: '3rem',
+              padding: '0.6rem',
               textAlign: 'center',
               position: 'relative',
               overflow: 'hidden',
@@ -403,8 +327,8 @@ const CommunityStats = () => {
             <div style={{ position: 'relative', zIndex: 2 }}>
               <motion.div
                 style={{
-                  fontSize: '5rem',
-                  marginBottom: '2rem',
+                  fontSize: '1.8rem',
+                  marginBottom: '1rem',
                   color: '#00ff99',
                   filter: 'drop-shadow(0 0 30px rgba(0, 255, 150, 0.8))'
                 }}
@@ -422,12 +346,15 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '3.5rem',
+                  fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
                   fontWeight: '900',
-                  marginBottom: '1.5rem',
+                  marginBottom: '1rem',
                   color: '#ffffff',
-                  textShadow: '0 0 30px rgba(255, 255, 255, 0.8)',
-                  transform: 'translateZ(30px)'
+                  textShadow: '0 0 20px rgba(255, 255, 255, 0.8)',
+                  transform: 'translateZ(20px)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 animate={{ 
                   textShadow: [
@@ -445,21 +372,27 @@ const CommunityStats = () => {
                 ${animatedStats.treasure}M+
               </motion.h3>
               <p style={{
-                fontSize: '1.2rem',
+                fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
                 fontWeight: '800',
                 color: '#00ff99',
                 marginBottom: '1rem',
                 textShadow: '0 2px 15px rgba(0, 0, 0, 0.5)',
-                transform: 'translateZ(20px)'
+                transform: 'translateZ(20px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Market Cap
               </p>
               <p style={{
-                fontSize: '0.9rem',
+                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)',
                 color: '#ffffff',
                 opacity: 0.9,
-                lineHeight: '1.6',
-                transform: 'translateZ(15px)'
+                lineHeight: '1.4',
+                transform: 'translateZ(10px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Secure and growing ecosystem value
               </p>
@@ -472,7 +405,7 @@ const CommunityStats = () => {
               background: 'linear-gradient(135deg, rgba(200, 50, 0, 0.3) 0%, rgba(255, 100, 25, 0.2) 50%, rgba(255, 150, 50, 0.3) 100%)',
               backdropFilter: 'blur(40px)',
               borderRadius: '20px',
-              padding: '3rem',
+              padding: '0.6rem',
               textAlign: 'center',
               position: 'relative',
               overflow: 'hidden',
@@ -543,8 +476,8 @@ const CommunityStats = () => {
             <div style={{ position: 'relative', zIndex: 2 }}>
               <motion.div
                 style={{
-                  fontSize: '5rem',
-                  marginBottom: '2rem',
+                  fontSize: '1.8rem',
+                  marginBottom: '1rem',
                   color: '#ff6600',
                   filter: 'drop-shadow(0 0 30px rgba(255, 100, 0, 0.8))'
                 }}
@@ -562,12 +495,15 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '3.5rem',
+                  fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
                   fontWeight: '900',
-                  marginBottom: '1.5rem',
+                  marginBottom: '1rem',
                   color: '#ffffff',
-                  textShadow: '0 0 30px rgba(255, 255, 255, 0.8)',
-                  transform: 'translateZ(30px)'
+                  textShadow: '0 0 20px rgba(255, 255, 255, 0.8)',
+                  transform: 'translateZ(20px)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 animate={{ 
                   textShadow: [
@@ -585,21 +521,27 @@ const CommunityStats = () => {
                 {animatedStats.growth}%
               </motion.h3>
               <p style={{
-                fontSize: '1.2rem',
+                fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
                 fontWeight: '800',
                 color: '#ff6600',
                 marginBottom: '1rem',
                 textShadow: '0 2px 15px rgba(0, 0, 0, 0.5)',
-                transform: 'translateZ(20px)'
+                transform: 'translateZ(20px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Growth Rate
               </p>
               <p style={{
-                fontSize: '0.9rem',
+                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)',
                 color: '#ffffff',
                 opacity: 0.9,
-                lineHeight: '1.6',
-                transform: 'translateZ(15px)'
+                lineHeight: '1.4',
+                transform: 'translateZ(10px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Month-over-month pod expansion
               </p>
@@ -612,7 +554,7 @@ const CommunityStats = () => {
               background: 'linear-gradient(135deg, rgba(50, 0, 100, 0.3) 0%, rgba(100, 25, 150, 0.2) 50%, rgba(150, 50, 200, 0.3) 100%)',
               backdropFilter: 'blur(40px)',
               borderRadius: '20px',
-              padding: '3rem',
+              padding: '0.6rem',
               textAlign: 'center',
               position: 'relative',
               overflow: 'hidden',
@@ -683,8 +625,8 @@ const CommunityStats = () => {
             <div style={{ position: 'relative', zIndex: 2 }}>
               <motion.div
                 style={{
-                  fontSize: '5rem',
-                  marginBottom: '2rem',
+                  fontSize: '1.8rem',
+                  marginBottom: '1rem',
                   color: '#9900ff',
                   filter: 'drop-shadow(0 0 30px rgba(150, 0, 255, 0.8))'
                 }}
@@ -702,12 +644,15 @@ const CommunityStats = () => {
               </motion.div>
               <motion.h3 
                 style={{
-                  fontSize: '3.5rem',
+                  fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
                   fontWeight: '900',
-                  marginBottom: '1.5rem',
+                  marginBottom: '1rem',
                   color: '#ffffff',
-                  textShadow: '0 0 30px rgba(255, 255, 255, 0.8)',
-                  transform: 'translateZ(30px)'
+                  textShadow: '0 0 20px rgba(255, 255, 255, 0.8)',
+                  transform: 'translateZ(20px)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 animate={{ 
                   textShadow: [
@@ -725,176 +670,33 @@ const CommunityStats = () => {
                 ${animatedStats.waters.toFixed(1)}M
               </motion.h3>
               <p style={{
-                fontSize: '1.2rem',
+                fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
                 fontWeight: '800',
                 color: '#9900ff',
                 marginBottom: '1rem',
                 textShadow: '0 2px 15px rgba(0, 0, 0, 0.5)',
-                transform: 'translateZ(20px)'
+                transform: 'translateZ(20px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 24 Hours Volume
               </p>
               <p style={{
-                fontSize: '0.9rem',
+                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)',
                 color: '#ffffff',
                 opacity: 0.9,
-                lineHeight: '1.6',
-                transform: 'translateZ(15px)'
+                lineHeight: '1.4',
+                transform: 'translateZ(10px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Global trading activity and market participation
               </p>
             </div>
           </motion.div>
 
-          <motion.div
-            className="stat-3d-card"
-            style={{
-              background: 'linear-gradient(135deg, rgba(100, 50, 0, 0.3) 0%, rgba(150, 100, 25, 0.2) 50%, rgba(200, 150, 50, 0.3) 100%)',
-              backdropFilter: 'blur(40px)',
-              borderRadius: '20px',
-              padding: '3rem',
-              textAlign: 'center',
-              position: 'relative',
-              overflow: 'hidden',
-              border: '1px solid rgba(255, 200, 0, 0.2)',
-              boxShadow: '0 20px 40px rgba(200, 150, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-              transform: 'translateZ(30px)',
-              transformStyle: 'preserve-3d'
-            }}
-            initial={{ opacity: 0, y: 50, rotateX: -30 }}
-            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-            transition={{ duration: 1, delay: 1.0 }}
-            viewport={{ once: true }}
-            whileHover={{ 
-              y: -15, 
-              scale: 1.03,
-              rotateY: 5,
-              boxShadow: '0 30px 60px rgba(200, 150, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
-            }}
-          >
-            {/* Professional Price Visualization */}
-            <div className="price-visualization">
-              <motion.div 
-                className="price-chart"
-                style={{
-                  position: 'absolute',
-                  bottom: '20px',
-                  left: '50%',
-                  width: '100px',
-                  height: '60px',
-                  background: 'linear-gradient(45deg, #ffd700, #ffed4e)',
-                  borderRadius: '15px',
-                  transform: 'translateX(-50%) translateZ(25px)',
-                  boxShadow: '0 0 30px rgba(255, 215, 0, 0.6)'
-                }}
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  rotate: [0, 2, -2, 0]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              <motion.div 
-                className="price-glow"
-                style={{
-                  position: 'absolute',
-                  bottom: '10px',
-                  left: '50%',
-                  width: '120px',
-                  height: '20px',
-                  background: 'radial-gradient(ellipse, rgba(255, 215, 0, 0.6) 0%, transparent 70%)',
-                  borderRadius: '50%',
-                  transform: 'translateX(-50%) translateZ(20px)'
-                }}
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  opacity: [0.3, 0.8, 0.3]
-                }}
-                transition={{ 
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-            </div>
-            
-            <div style={{ position: 'relative', zIndex: 2 }}>
-              <motion.div
-                style={{
-                  fontSize: '5rem',
-                  marginBottom: '2rem',
-                  color: '#ffd700',
-                  filter: 'drop-shadow(0 0 30px rgba(255, 215, 0, 0.8))'
-                }}
-                animate={{
-                  y: [0, -15, 0],
-                  rotate: [0, 8, -8, 0],
-                  scale: [1, 1.15, 1]
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <img 
-                  src="/whale-shark-logo.svg" 
-                  alt="WhaleShark" 
-                  style={{
-                    height: '60px',
-                    width: 'auto',
-                    filter: 'drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)) brightness(1.2)'
-                  }}
-                />
-              </motion.div>
-              <motion.h3 
-                style={{
-                  fontSize: '2.5rem',
-                  fontWeight: '900',
-                  marginBottom: '1.5rem',
-                  color: '#ffffff',
-                  textShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
-                  transform: 'translateZ(30px)'
-                }}
-                animate={{ 
-                  textShadow: [
-                    '0 4px 20px rgba(0, 0, 0, 0.5)',
-                    '0 6px 30px rgba(0, 0, 0, 0.7)',
-                    '0 4px 20px rgba(0, 0, 0, 0.5)'
-                  ]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                $0.00042
-              </motion.h3>
-              <p style={{
-                fontSize: '1.2rem',
-                fontWeight: '800',
-                color: '#ffd700',
-                marginBottom: '1rem',
-                textShadow: '0 2px 15px rgba(0, 0, 0, 0.5)',
-                transform: 'translateZ(20px)'
-              }}>
-                Current Price
-              </p>
-              <p style={{
-                fontSize: '0.9rem',
-                color: '#ffffff',
-                opacity: 0.9,
-                lineHeight: '1.6',
-                transform: 'translateZ(15px)'
-              }}>
-                Real-time token valuation and market performance
-              </p>
-            </div>
-          </motion.div>
         </div>
 
         {/* Revolutionary 3D Analytics Summary */}
@@ -904,8 +706,8 @@ const CommunityStats = () => {
             background: 'rgba(0, 50, 100, 0.2)',
             backdropFilter: 'blur(30px)',
             borderRadius: '40px',
-            padding: '5rem',
-            marginTop: '6rem',
+            padding: '0.8rem',
+            marginTop: '3rem',
             textAlign: 'center',
             position: 'relative',
             overflow: 'hidden',
@@ -999,15 +801,18 @@ const CommunityStats = () => {
           <div style={{ position: 'relative', zIndex: 2 }}>
             <motion.h3 
               style={{
-                fontSize: '2.8rem',
+                fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
                 fontWeight: '900',
-                marginBottom: '3rem',
+                marginBottom: '1.5rem',
                 background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 textShadow: '0 0 40px rgba(0, 255, 255, 0.6)',
-                transform: 'translateZ(40px)'
+                transform: 'translateZ(40px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}
               animate={{ 
                 textShadow: [
@@ -1026,14 +831,17 @@ const CommunityStats = () => {
             </motion.h3>
             <motion.p 
               style={{
-                fontSize: '1.2rem',
+                fontSize: 'clamp(0.7rem, 1.8vw, 1rem)',
                 color: '#ffffff',
                 lineHeight: '1.8',
                 maxWidth: '1000px',
                 margin: '0 auto',
                 textShadow: '0 2px 15px rgba(0, 0, 0, 0.5)',
                 opacity: 0.9,
-                transform: 'translateZ(30px)'
+                transform: 'translateZ(30px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}
               animate={{ 
                 opacity: [0.8, 1, 0.8]

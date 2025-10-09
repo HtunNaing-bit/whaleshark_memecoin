@@ -1,6 +1,6 @@
 /* Revolutionary 3D Final Section */
 .final-section-3d {
-  padding: 120px 20px;
+  padding: 40px 15px;
   background: 
     linear-gradient(180deg, #001122 0%, #002244 25%, #003366 50%, #001a33 75%, #000811 100%);
   color: #ffffff;
@@ -168,15 +168,6 @@
 }
 
 /* Enhanced Responsive Design */
-@media (max-width: 1200px) {
-  .final-section-3d {
-    padding: 100px 20px;
-  }
-  
-  .main-cta-3d {
-    padding: 5rem;
-  }
-}
 
 @media (max-width: 992px) {
   .final-section-3d {
@@ -233,21 +224,21 @@
 /* Enhanced Responsive Design for All Devices */
 @media (max-width: 1400px) {
   .final-section-3d {
-    padding: 100px 20px;
+    padding: 60px 15px;
   }
   
   .final-cta-3d {
-    padding: 4.5rem;
+    padding: 3rem;
   }
   
   .community-benefits-3d {
-    padding: 4.5rem;
+    padding: 3rem;
   }
 }
 
 @media (max-width: 1200px) {
   .final-section-3d {
-    padding: 80px 15px;
+    padding: 50px 12px;
   }
   
   .final-cta-3d {

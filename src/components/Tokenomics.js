@@ -88,7 +88,7 @@ const Tokenomics = () => {
           className="tokenomics-3d-header"
           style={{
             textAlign: 'center',
-            marginBottom: '6rem',
+            marginBottom: '3rem',
             transform: 'translateZ(50px)'
           }}
           initial={{ opacity: 0, y: 50, rotateX: -20 }}
@@ -98,7 +98,7 @@ const Tokenomics = () => {
         >
           <motion.h2 
             style={{
-              fontSize: '4rem',
+              fontSize: 'clamp(1rem, 3vw, 1.5rem)',
               fontWeight: '900',
               marginBottom: '2rem',
               background: 'linear-gradient(45deg, #00ffff, #0099ff, #66ccff, #00ccff)',
@@ -106,7 +106,12 @@ const Tokenomics = () => {
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               textShadow: '0 0 60px rgba(0, 255, 255, 0.8)',
-              transform: 'translateZ(60px)'
+              transform: 'translateZ(60px)',
+              lineHeight: '1.3',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
+              hyphens: 'auto',
+              textAlign: 'center'
             }}
             animate={{ 
               textShadow: [
@@ -125,7 +130,7 @@ const Tokenomics = () => {
           </motion.h2>
           <motion.p 
             style={{
-              fontSize: '1.4rem',
+              fontSize: 'clamp(0.7rem, 2vw, 1rem)',
               color: '#ffffff',
               maxWidth: '900px',
               margin: '0 auto',
@@ -133,7 +138,11 @@ const Tokenomics = () => {
               fontWeight: '600',
               opacity: 0.9,
               textShadow: '0 2px 20px rgba(0, 255, 255, 0.4)',
-              transform: 'translateZ(30px)'
+              transform: 'translateZ(30px)',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
+              hyphens: 'auto',
+              textAlign: 'center'
             }}
             animate={{ 
               opacity: [0.8, 1, 0.8]
@@ -155,8 +164,8 @@ const Tokenomics = () => {
             background: 'rgba(0, 50, 100, 0.2)',
             backdropFilter: 'blur(30px)',
             borderRadius: '40px',
-            padding: '5rem',
-            marginBottom: '5rem',
+            padding: '0.8rem',
+            marginBottom: '3rem',
             position: 'relative',
             overflow: 'hidden',
             border: '2px solid rgba(0, 255, 255, 0.4)',
@@ -180,7 +189,7 @@ const Tokenomics = () => {
             style={{
               display: 'flex',
               justifyContent: 'center',
-              marginBottom: '4rem',
+              marginBottom: '2rem',
               transform: 'translateZ(60px)'
             }}
             initial={{ opacity: 0, scale: 0.5, rotateY: -180 }}
@@ -208,10 +217,10 @@ const Tokenomics = () => {
                 src="/whale-shark-logo.svg"
                 alt="WhaleShark Logo"
                 style={{
-                  height: '150px',
+                  height: '70px',
                   width: 'auto',
-                  filter: 'drop-shadow(0 0 50px rgba(0, 255, 255, 0.8)) brightness(1.3)',
-                  transform: 'translateZ(40px)'
+                  filter: 'drop-shadow(0 0 35px rgba(0, 255, 255, 0.8)) brightness(1.3)',
+                  transform: 'translateZ(30px)'
                 }}
               />
               <div className="holographic-ring"></div>
@@ -223,10 +232,12 @@ const Tokenomics = () => {
           {/* 3D Token Metrics Grid */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '3rem',
-            marginBottom: '3rem',
-            transform: 'translateZ(40px)'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: 'clamp(1rem, 3vw, 2rem)',
+            marginBottom: '2rem',
+            transform: 'translateZ(40px)',
+            width: '100%',
+            maxWidth: '100%'
           }}>
             <motion.div
               className="token-metric-3d"
@@ -234,7 +245,7 @@ const Tokenomics = () => {
                 background: 'rgba(0, 100, 200, 0.2)',
                 border: '2px solid rgba(0, 255, 255, 0.4)',
                 borderRadius: '25px',
-                padding: '3rem',
+                padding: '0.6rem',
                 textAlign: 'center',
                 backdropFilter: 'blur(20px)',
                 transform: 'translateZ(30px)',
@@ -242,66 +253,52 @@ const Tokenomics = () => {
                 position: 'relative',
                 overflow: 'hidden'
               }}
+              animate={{
+                opacity: [0.98, 1, 0.98]
+              }}
               whileHover={{ 
                 y: -15, 
-                scale: 1.05,
-                rotateY: 10,
-                boxShadow: '0 35px 70px rgba(0, 100, 200, 0.5)'
+                scale: 1.05
               }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
             >
-              {/* 3D Supply Visualization */}
-              <div className="supply-visualization">
-                <motion.div 
-                  className="supply-bar"
-                  style={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    left: '50%',
-                    width: '80px',
-                    height: '100px',
-                    background: 'linear-gradient(to top, #00ffff, #0099ff)',
-                    borderRadius: '10px',
-                    transform: 'translateX(-50%) translateZ(25px)',
-                    boxShadow: '0 0 30px rgba(0, 255, 255, 0.6)'
-                  }}
-                  animate={{ 
-                    height: ['20px', '100px', '20px'],
-                    opacity: [0.5, 1, 0.5]
-                  }}
-                  transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              </div>
               
               <h4 style={{ 
-                fontSize: '1.6rem', 
+                fontSize: 'clamp(0.4rem, 1.2vw, 0.6rem)', 
                 fontWeight: '800', 
                 color: '#00ffff', 
-                marginBottom: '1.5rem', 
-                textShadow: '0 0 20px rgba(0, 255, 255, 0.6)',
-                transform: 'translateZ(20px)'
+                marginBottom: '1rem', 
+                textShadow: '0 0 15px rgba(0, 255, 255, 0.6)',
+                transform: 'translateZ(15px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Total Supply
               </h4>
               <motion.p 
                 style={{ 
-                  fontSize: '2.4rem', 
+                  fontSize: 'clamp(1rem, 2.5vw, 1.4rem)', 
                   fontWeight: '900', 
                   color: '#ffffff', 
-                  marginBottom: '1rem', 
-                  textShadow: '0 0 30px rgba(255, 255, 255, 0.8)',
-                  transform: 'translateZ(25px)'
+                  marginBottom: '0.8rem', 
+                  textShadow: '0 0 20px rgba(255, 255, 255, 0.8)',
+                  transform: 'translateZ(20px)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 animate={{ 
                   textShadow: [
                     '0 0 30px rgba(255, 255, 255, 0.8)',
                     '0 0 50px rgba(0, 255, 255, 1)',
                     '0 0 30px rgba(255, 255, 255, 0.8)'
-                  ]
+                  ],
+                  opacity: [0.95, 1, 0.95]
                 }}
                 transition={{ 
                   duration: 3,
@@ -312,10 +309,13 @@ const Tokenomics = () => {
                 1B $WHALE
               </motion.p>
               <p style={{ 
-                fontSize: '0.9rem', 
+                fontSize: 'clamp(0.35rem, 1vw, 0.5rem)', 
                 color: '#ffffff', 
                 opacity: 0.9,
-                transform: 'translateZ(15px)'
+                transform: 'translateZ(10px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Fixed supply for ultimate scarcity
               </p>
@@ -327,7 +327,7 @@ const Tokenomics = () => {
                 background: 'rgba(0, 150, 100, 0.2)',
                 border: '2px solid rgba(0, 255, 150, 0.4)',
                 borderRadius: '25px',
-                padding: '3rem',
+                padding: '0.6rem',
                 textAlign: 'center',
                 backdropFilter: 'blur(20px)',
                 transform: 'translateZ(30px)',
@@ -335,66 +335,52 @@ const Tokenomics = () => {
                 position: 'relative',
                 overflow: 'hidden'
               }}
+              animate={{
+                opacity: [0.98, 1, 0.98]
+              }}
               whileHover={{ 
                 y: -15, 
-                scale: 1.05,
-                rotateY: -10,
-                boxShadow: '0 35px 70px rgba(0, 150, 100, 0.5)'
+                scale: 1.05
               }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
             >
-              {/* 3D Market Cap Visualization */}
-              <div className="market-cap-visualization">
-                <motion.div 
-                  className="market-chart"
-                  style={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    left: '50%',
-                    width: '100px',
-                    height: '80px',
-                    background: 'linear-gradient(45deg, #00ff99, #00cc66)',
-                    borderRadius: '15px',
-                    transform: 'translateX(-50%) translateZ(25px)',
-                    boxShadow: '0 0 30px rgba(0, 255, 150, 0.6)'
-                  }}
-                  animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              </div>
               
               <h4 style={{ 
-                fontSize: '1.6rem', 
+                fontSize: 'clamp(0.5rem, 1.5vw, 0.7rem)', 
                 fontWeight: '800', 
                 color: '#00ff99', 
                 marginBottom: '1.5rem', 
                 textShadow: '0 0 20px rgba(0, 255, 150, 0.6)',
-                transform: 'translateZ(20px)'
+                transform: 'translateZ(20px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Market Cap
               </h4>
               <motion.p 
                 style={{ 
-                  fontSize: '2.4rem', 
+                  fontSize: 'clamp(1rem, 2.5vw, 1.4rem)', 
                   fontWeight: '900', 
                   color: '#ffffff', 
-                  marginBottom: '1rem', 
-                  textShadow: '0 0 30px rgba(255, 255, 255, 0.8)',
-                  transform: 'translateZ(25px)'
+                  marginBottom: '0.8rem', 
+                  textShadow: '0 0 20px rgba(255, 255, 255, 0.8)',
+                  transform: 'translateZ(20px)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 animate={{ 
                   textShadow: [
                     '0 0 30px rgba(255, 255, 255, 0.8)',
                     '0 0 50px rgba(0, 255, 150, 1)',
                     '0 0 30px rgba(255, 255, 255, 0.8)'
-                  ]
+                  ],
+                  opacity: [0.95, 1, 0.95]
                 }}
                 transition={{ 
                   duration: 3,
@@ -405,10 +391,13 @@ const Tokenomics = () => {
                 $50M+
               </motion.p>
               <p style={{ 
-                fontSize: '0.9rem', 
+                fontSize: 'clamp(0.35rem, 1vw, 0.5rem)', 
                 color: '#ffffff', 
                 opacity: 0.9,
-                transform: 'translateZ(15px)'
+                transform: 'translateZ(10px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Rapidly growing ecosystem
               </p>
@@ -420,7 +409,7 @@ const Tokenomics = () => {
                 background: 'rgba(255, 100, 0, 0.2)',
                 border: '2px solid rgba(255, 150, 0, 0.4)',
                 borderRadius: '25px',
-                padding: '3rem',
+                padding: '0.6rem',
                 textAlign: 'center',
                 backdropFilter: 'blur(20px)',
                 transform: 'translateZ(30px)',
@@ -428,89 +417,52 @@ const Tokenomics = () => {
                 position: 'relative',
                 overflow: 'hidden'
               }}
+              animate={{
+                opacity: [0.98, 1, 0.98]
+              }}
               whileHover={{ 
                 y: -15, 
-                scale: 1.05,
-                rotateY: 10,
-                boxShadow: '0 35px 70px rgba(255, 100, 0, 0.5)'
+                scale: 1.05
               }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
             >
-              {/* 3D Liquidity Visualization */}
-              <div className="liquidity-visualization">
-                <motion.div 
-                  className="liquidity-lock"
-                  style={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    left: '50%',
-                    width: '60px',
-                    height: '60px',
-                    background: 'linear-gradient(45deg, #ff6600, #ff9900)',
-                    borderRadius: '50%',
-                    transform: 'translateX(-50%) translateZ(25px)',
-                    boxShadow: '0 0 30px rgba(255, 100, 0, 0.6)'
-                  }}
-                  animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.1, 1]
-                  }}
-                  transition={{ 
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-                <motion.div 
-                  className="lock-chain"
-                  style={{
-                    position: 'absolute',
-                    bottom: '40px',
-                    left: '50%',
-                    width: '80px',
-                    height: '4px',
-                    background: 'linear-gradient(90deg, #ff6600, #ff9900)',
-                    borderRadius: '2px',
-                    transform: 'translateX(-50%) translateZ(20px)',
-                    boxShadow: '0 0 15px rgba(255, 100, 0, 0.5)'
-                  }}
-                  animate={{ 
-                    opacity: [0.3, 1, 0.3],
-                    scaleX: [0.8, 1.2, 0.8]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              </div>
               
               <h4 style={{ 
-                fontSize: '1.6rem', 
+                fontSize: 'clamp(0.5rem, 1.5vw, 0.7rem)', 
                 fontWeight: '800', 
                 color: '#ff6600', 
                 marginBottom: '1.5rem', 
                 textShadow: '0 0 20px rgba(255, 100, 0, 0.6)',
-                transform: 'translateZ(20px)'
+                transform: 'translateZ(20px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Liquidity
               </h4>
               <motion.p 
                 style={{ 
-                  fontSize: '2.4rem', 
+                  fontSize: 'clamp(1rem, 2.5vw, 1.4rem)', 
                   fontWeight: '900', 
                   color: '#ffffff', 
-                  marginBottom: '1rem', 
-                  textShadow: '0 0 30px rgba(255, 255, 255, 0.8)',
-                  transform: 'translateZ(25px)'
+                  marginBottom: '0.8rem', 
+                  textShadow: '0 0 20px rgba(255, 255, 255, 0.8)',
+                  transform: 'translateZ(20px)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 animate={{ 
                   textShadow: [
                     '0 0 30px rgba(255, 255, 255, 0.8)',
                     '0 0 50px rgba(255, 100, 0, 1)',
                     '0 0 30px rgba(255, 255, 255, 0.8)'
-                  ]
+                  ],
+                  opacity: [0.95, 1, 0.95]
                 }}
                 transition={{ 
                   duration: 3,
@@ -521,10 +473,13 @@ const Tokenomics = () => {
                 90%
               </motion.p>
               <p style={{ 
-                fontSize: '0.9rem', 
+                fontSize: 'clamp(0.35rem, 1vw, 0.5rem)', 
                 color: '#ffffff', 
                 opacity: 0.9,
-                transform: 'translateZ(15px)'
+                transform: 'translateZ(10px)',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                textAlign: 'center'
               }}>
                 Locked for maximum security
               </p>
@@ -535,7 +490,7 @@ const Tokenomics = () => {
           <motion.div
             className="contract-address-section"
             style={{
-              marginTop: '3rem',
+              marginTop: '2rem',
               textAlign: 'center',
               position: 'relative',
               zIndex: 2
@@ -552,8 +507,8 @@ const Tokenomics = () => {
                 background: 'rgba(0, 100, 200, 0.3)',
                 border: '2px solid rgba(0, 255, 255, 0.4)',
                 borderRadius: '20px',
-                padding: '2rem',
-                margin: '2rem auto',
+                padding: '1.5rem',
+                margin: '1.5rem auto',
                 maxWidth: '1000px',
                 position: 'relative',
                 overflow: 'hidden',
@@ -567,11 +522,14 @@ const Tokenomics = () => {
             >
               <motion.div
                 style={{
-                  fontSize: '1rem',
+                  fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)',
                   fontWeight: '600',
                   color: '#ffffff',
-                  marginBottom: '1rem',
-                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)'
+                  marginBottom: '0.8rem',
+                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 animate={{ opacity: [0.8, 1, 0.8] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -581,17 +539,20 @@ const Tokenomics = () => {
               
               <motion.div
                 style={{
-                  fontSize: '0.8rem',
+                  fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)',
                   fontFamily: 'monospace',
                   color: '#00ffff',
                   background: 'rgba(0, 0, 0, 0.3)',
-                  padding: '1rem',
+                  padding: 'clamp(0.6rem, 2vw, 1rem)',
                   borderRadius: '10px',
                   border: '1px solid rgba(0, 255, 255, 0.3)',
                   wordBreak: 'break-all',
                   cursor: 'pointer',
                   userSelect: 'all',
-                  textShadow: '0 0 10px rgba(0, 255, 255, 0.5)'
+                  textShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}
                 whileHover={{ 
                   backgroundColor: 'rgba(0, 255, 255, 0.1)',
@@ -628,10 +589,13 @@ const Tokenomics = () => {
               >
                 <motion.p
                   style={{
-                    fontSize: '0.8rem',
+                    fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)',
                     color: '#b8d4f0',
                     opacity: 0.8,
-                    margin: 0
+                    margin: 0,
+                    wordWrap: 'break-word',
+                    overflowWrap: 'break-word',
+                    textAlign: 'center'
                   }}
                   animate={{ opacity: [0.6, 1, 0.6] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -647,14 +611,17 @@ const Tokenomics = () => {
                     background: 'linear-gradient(135deg, #00ffff, #0099ff)',
                     border: '2px solid rgba(0, 255, 255, 0.6)',
                     borderRadius: '8px',
-                    padding: '0.5rem 1rem',
-                    fontSize: '0.8rem',
+                    padding: 'clamp(0.4rem, 1.5vw, 0.6rem) clamp(0.8rem, 2.5vw, 1.2rem)',
+                    fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)',
                     fontWeight: '600',
                     color: '#ffffff',
                     cursor: 'pointer',
-                    textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
-                    boxShadow: '0 4px 15px rgba(0, 255, 255, 0.3)',
-                    transition: 'all 0.3s ease'
+                    textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
+                    boxShadow: '0 3px 12px rgba(0, 255, 255, 0.3)',
+                    transition: 'all 0.3s ease',
+                    wordWrap: 'break-word',
+                    overflowWrap: 'break-word',
+                    textAlign: 'center'
                   }}
                   whileHover={{ 
                     scale: 1.05,
@@ -689,8 +656,8 @@ const Tokenomics = () => {
             background: 'rgba(78, 205, 196, 0.1)',
             backdropFilter: 'blur(20px)',
             borderRadius: '24px',
-            padding: '4rem',
-            marginBottom: '4rem',
+            padding: '2.5rem',
+            marginBottom: '2.5rem',
             position: 'relative',
             overflow: 'hidden',
             border: '1px solid rgba(78, 205, 196, 0.3)',
@@ -712,29 +679,33 @@ const Tokenomics = () => {
             zIndex: 1
           }} />
           
-          <div style={{ position: 'relative', zIndex: 2 }}>
+            <div style={{ position: 'relative', zIndex: 10 }}>
             <h3 style={{
-              fontSize: '2.2rem',
+              fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
               fontWeight: '900',
               textAlign: 'center',
               marginBottom: '3rem',
               color: '#ffffff',
-              textShadow: '0 0 20px rgba(255, 255, 255, 0.5)'
+              textShadow: '0 0 20px rgba(255, 255, 255, 0.5)',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word'
             }}>
               🛡️ Security & Trust Features 🛡️
             </h3>
             
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-              gap: '2.5rem'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+              gap: 'clamp(1rem, 2vw, 1.5rem)',
+              width: '100%',
+              maxWidth: '100%'
             }}>
               <motion.div
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '20px',
-                  padding: '2.5rem',
+                  padding: '1rem',
                   textAlign: 'center',
                   backdropFilter: 'blur(10px)',
                   position: 'relative'
@@ -746,19 +717,22 @@ const Tokenomics = () => {
                   position: 'absolute',
                   top: '20px',
                   right: '20px',
-                  fontSize: '2.4rem',
+                  fontSize: '1.5rem',
                   opacity: 0.8
                 }}>🔒</div>
                 <h4 style={{ 
-                  fontSize: '1.4rem', 
+                  fontSize: 'clamp(0.5rem, 1.5vw, 0.7rem)', 
                   fontWeight: '800', 
-                  marginBottom: '1.5rem',
+                  marginBottom: '1rem',
                   color: '#4ecdc4',
-                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)'
+                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}>
                   Smart Contract Audits
                 </h4>
-                <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#ffffff', opacity: 0.9 }}>
+                <p style={{ fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)', lineHeight: '1.4', color: '#ffffff', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
                   Comprehensive security audits by leading blockchain security firms ensure 
                   the integrity and safety of our smart contracts.
                 </p>
@@ -769,7 +743,7 @@ const Tokenomics = () => {
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '20px',
-                  padding: '2.5rem',
+                  padding: '1rem',
                   textAlign: 'center',
                   backdropFilter: 'blur(10px)',
                   position: 'relative'
@@ -781,19 +755,22 @@ const Tokenomics = () => {
                   position: 'absolute',
                   top: '20px',
                   right: '20px',
-                  fontSize: '2.4rem',
+                  fontSize: '1.5rem',
                   opacity: 0.8
                 }}>💎</div>
                 <h4 style={{ 
-                  fontSize: '1.4rem', 
+                  fontSize: 'clamp(0.5rem, 1.5vw, 0.7rem)', 
                   fontWeight: '800', 
-                  marginBottom: '1.5rem',
+                  marginBottom: '1rem',
                   color: '#ff6b6b',
-                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)'
+                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}>
                   Liquidity Locked
                 </h4>
-                <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#ffffff', opacity: 0.9 }}>
+                <p style={{ fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)', lineHeight: '1.4', color: '#ffffff', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
                   Major portion of liquidity is locked in secure contracts, 
                   preventing rug pulls and ensuring long-term stability.
                 </p>
@@ -804,7 +781,7 @@ const Tokenomics = () => {
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '20px',
-                  padding: '2.5rem',
+                  padding: '1rem',
                   textAlign: 'center',
                   backdropFilter: 'blur(10px)',
                   position: 'relative'
@@ -816,19 +793,22 @@ const Tokenomics = () => {
                   position: 'absolute',
                   top: '20px',
                   right: '20px',
-                  fontSize: '2.4rem',
+                  fontSize: '1.5rem',
                   opacity: 0.8
                 }}>🌊</div>
                 <h4 style={{ 
-                  fontSize: '1.4rem', 
+                  fontSize: 'clamp(0.5rem, 1.5vw, 0.7rem)', 
                   fontWeight: '800', 
-                  marginBottom: '1.5rem',
+                  marginBottom: '1rem',
                   color: '#00d4ff',
-                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)'
+                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  textAlign: 'center'
                 }}>
                   Community Governance
                 </h4>
-                <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#ffffff', opacity: 0.9 }}>
+                <p style={{ fontSize: 'clamp(0.7rem, 1.8vw, 0.9rem)', lineHeight: '1.4', color: '#ffffff', opacity: 0.9, wordWrap: 'break-word', overflowWrap: 'break-word', textAlign: 'center' }}>
                   Decentralized decision-making process where community members 
                   vote on important protocol changes and improvements.
                 </p>
@@ -843,7 +823,7 @@ const Tokenomics = () => {
             background: 'rgba(255, 255, 255, 0.05)',
             backdropFilter: 'blur(20px)',
             borderRadius: '24px',
-            padding: '4rem',
+            padding: '2.5rem',
             textAlign: 'center',
             position: 'relative',
             overflow: 'hidden',
@@ -866,26 +846,32 @@ const Tokenomics = () => {
             zIndex: 1
           }} />
           
-          <div style={{ position: 'relative', zIndex: 2 }}>
+            <div style={{ position: 'relative', zIndex: 10 }}>
             <h3 style={{
-              fontSize: '2rem',
+              fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
               fontWeight: '900',
               marginBottom: '2rem',
               color: '#ffffff',
-              textShadow: '0 0 20px rgba(255, 255, 255, 0.5)'
+              textShadow: '0 0 20px rgba(255, 255, 255, 0.5)',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
+              textAlign: 'center'
             }}>
-              <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '40px', width: 'auto', margin: '0 15px', filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.7))'}} />
+              <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: 'clamp(30px, 6vw, 40px)', width: 'auto', margin: '0 10px', filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.7))'}} />
               Token Distribution Strategy
-              <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: '40px', width: 'auto', margin: '0 15px', filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.7))'}} />
+              <img src="/whale-shark-logo.svg" alt="WhaleShark" style={{height: 'clamp(30px, 6vw, 40px)', width: 'auto', margin: '0 10px', filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.7))'}} />
             </h3>
             <p style={{
-              fontSize: '1.1rem',
+              fontSize: 'clamp(0.7rem, 1.8vw, 1rem)',
               color: '#ffffff',
               lineHeight: '1.8',
               maxWidth: '900px',
               margin: '0 auto',
               textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
-              opacity: 0.9
+              opacity: 0.9,
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
+              textAlign: 'center'
             }}>
               Our token distribution is carefully designed to ensure fair allocation, community growth, 
               and long-term sustainability. Every token serves a purpose in building a stronger ecosystem 
